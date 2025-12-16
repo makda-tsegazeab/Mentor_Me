@@ -1,0 +1,15 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Data files (very important!)
+data/
+*.csv
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+__pycache__/
+
+# IDE
+.vscode/
+.DS_Store

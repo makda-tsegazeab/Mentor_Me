@@ -1,0 +1,439 @@
+                                ),
+                              ],
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: _selectedImage != null
+                                    ? FileImage(_selectedImage!)
+                                    : const NetworkImage(
+                                        'https://i.pravatar.cc/300?img=47',
+                                      ) as ImageProvider,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 4,
+                            right: 4,
+                            child: InkWell(
+                              onTap: _isUploading ? null : _pickImage,
+                              child: Container(
+                                height: 36,
+                                width: 36,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF2B8CEE),
+                                  shape: BoxShape.circle,
+                                  border:
+                                      Border.all(color: Colors.white, width: 2),
+                                ),
+                                child: const Icon(Icons.edit,
+                                    size: 18, color: Colors.white),
+                              ),
+                            ),
+                          ),
+                          if (_isUploading)
+                            const Positioned.fill(
+                              child: Center(
+                                child: CircularProgressIndicator(),
+                              ),
+                            ),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
+                      const Text(
+                        'Tell Us About Yourself',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFF111418),
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      const Text(
+                        'This helps tutors find the right fit.',
+                        style: TextStyle(
+                          color: Color(0xFF617589),
+                          fontSize: 14,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+
+                // Personal Information
+                _section(
+                  title: 'Personal Information',
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Full Name',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF111418),
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                      TextFormField(
+                        controller: _nameController,
+                        decoration: _input(
+                          hint: 'Enter your full name',
+                        ),
+                        validator: (v) =>
+                            v == null || v.isEmpty ? 'Please enter name' : null,
+                      ),
+                      const SizedBox(height: 12),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  'Age',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: Color(0xFF111418),
+                                  ),
+                                ),
+                                const SizedBox(height: 8),
+                                TextFormField(
+                                  controller: _ageController,
+                                  keyboardType: TextInputType.number,
+                                  decoration: _input(
+                                    hint: 'e.g., 16',
+                                  ),
+                                  validator: (v) => v == null || v.isEmpty
+                                      ? 'Enter age'
+                                      : null,
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  'City',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: Color(0xFF111418),
+                                  ),
+                                ),
+                                const SizedBox(height: 8),
+                                _cityAutocomplete(),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
+                      const Text(
+                        'Sex',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF111418),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Wrap(
+                        spacing: 8,
+                        children: sexOptions.map((opt) {
+                          final selected = _selectedSex == opt;
+                          return ChoiceChip(
+                            showCheckmark: false,
+                            label: Text(
+                              opt,
+                              style: TextStyle(
+                                color: selected
+                                    ? const Color(0xFF2B8CEE)
+                                    : const Color(0xFF617589),
+                                fontWeight: selected
+                                    ? FontWeight.w700
+                                    : FontWeight.w500,
+                              ),
+                            ),
+                            selected: selected,
+                            onSelected: (_) =>
+                                setState(() => _selectedSex = opt),
+                            selectedColor:
+                                const Color(0xFF2B8CEE).withOpacity(0.2),
+                            backgroundColor: Colors.grey.shade100,
+                            side: BorderSide.none,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Academic Needs
+                _section(
+                  title: 'Academic Needs',
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Grade Level',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF111418),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      DropdownButtonFormField<String>(
+                        value: _selectedGradeGroup,
+                        decoration: _input(hint: 'Select grade level'),
+                        items: gradeGroups
+                            .map(
+                              (g) => DropdownMenuItem(
+                                value: g,
+                                child: Text(g),
+                              ),
+                            )
+                            .toList(),
+                        onChanged: (v) =>
+                            setState(() => _selectedGradeGroup = v),
+                        validator: (v) =>
+                            v == null ? 'Please select grade level' : null,
+                      ),
+                      const SizedBox(height: 16),
+                      const Text(
+                        'Subjects you need help with',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF111418),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      _buildSubjectChips(),
+                      const SizedBox(height: 16),
+                    ],
+                  ),
+                ),
+
+                // Tutoring Preferences
+                _section(
+                  title: 'Tutoring Preferences',
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Preferred Tutor Gender',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF111418),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: tutorGenderOptions.map((opt) {
+                          final selected = _preferredTutorGender == opt;
+                          return ChoiceChip(
+                            showCheckmark: false,
+                            label: Text(
+                              opt,
+                              style: TextStyle(
+                                color: selected
+                                    ? const Color(0xFF2B8CEE)
+                                    : const Color(0xFF617589),
+                                fontWeight: selected
+                                    ? FontWeight.w700
+                                    : FontWeight.w500,
+                              ),
+                            ),
+                            selected: selected,
+                            onSelected: (_) =>
+                                setState(() => _preferredTutorGender = opt),
+                            selectedColor:
+                                const Color(0xFF2B8CEE).withOpacity(0.2),
+                            backgroundColor: Colors.grey.shade100,
+                            side: BorderSide.none,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                      const SizedBox(height: 16),
+                      _labeledSlider(
+                        label: 'Hours per Day',
+                        value: _hoursVal,
+                        min: 1,
+                        max: 8,
+                        display: '${_hoursVal.round()} Hours',
+                        onChanged: (v) => setState(
+                            () => _selectedHours = v.round().toString()),
+                      ),
+                      const SizedBox(height: 12),
+                      _labeledSlider(
+                        label: 'Days per Week',
+                        value: _daysVal,
+                        min: 1,
+                        max: 7,
+                        display: '${_daysVal.round()} Days',
+                        onChanged: (v) => setState(
+                            () => _selectedDays = v.round().toString()),
+                      ),
+                      const SizedBox(height: 12),
+                      const Text(
+                        'Max Price Per Hour',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF111418),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      TextFormField(
+                        controller: _maxPriceController,
+                        keyboardType: TextInputType.number,
+                        decoration: _input(
+                          hint: 'Enter amount',
+                          prefix: const Padding(
+                            padding: EdgeInsets.only(left: 12, right: 6),
+                            child: Text(
+                              '\$',
+                              style: TextStyle(color: Color(0xFF617589)),
+                            ),
+                          ),
+                          suffix: const Padding(
+                            padding: EdgeInsets.only(right: 12),
+                            child: Text(
+                              '/hr',
+                              style: TextStyle(color: Color(0xFF617589)),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 12),
+                // Action button and footer
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        width: double.infinity,
+                        height: 48,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF2B8CEE),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                          onPressed: _isUploading ? null : _saveProfile,
+                          child: const Text(
+                            'Save and Continue',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        'By continuing, you agree to our Terms of Service and Privacy Policy.',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFF617589),
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _section({required String title, required Widget child}) {
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF111418),
+            ),
+          ),
+          const SizedBox(height: 12),
+          child,
+        ],
+      ),
+    );
+  }
+
+  Widget _labeledSlider({
+    required String label,
+    required double value,
+    required double min,
+    required double max,
+    required String display,
+    required ValueChanged<double> onChanged,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              label,
+              style: const TextStyle(
+                fontWeight: FontWeight.w600,
+                color: Color(0xFF111418),
+              ),
+            ),
+            Text(
+              display,
+              style: const TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Color(0xFF2B8CEE),
+              ),
+            ),
+          ],
+        ),
+        Slider(
+          value: value,
+          min: min,
+          max: max,
+          divisions: (max - min).round(),
+          activeColor: const Color(0xFF2B8CEE),
+          inactiveColor: const Color(0xFFD1D1D1),
+          onChanged: onChanged,
+        ),
+      ],
+    );
+  }
+}

@@ -1,0 +1,33 @@
+tutorId,role,displayName,city,subjects,grades,minPricePerHour,maxPricePerHour,available
+0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,tutor,belay,Adwa,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4,260.0,,True
+0W7NM9Ie82Ta9E6BWE569HKVAE42,tutor,mehari,Mekelle,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12,300.0,,True
+0l2f2PHXtNRUMCFN9TX6TIywPhx1,tutor,teddy,Mekelle,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6,220.0,,True
+2cPC4cc64pNHZ7sIOqBv7d6qup33,tutor,nahom,Adwa,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10,200.0,,True
+321QGCtd7XRzGddayieKvaHdDm23,tutor,fisha,Aksum,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6,200.0,,True
+4JIeujA4Dnhs4idBMx38ZtXFoQf1,tutor,kebron,Mekelle,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12,300.0,,True
+6ZhMaFEz2JR9djnjIWdVgPRibWl2,tutor,hlina,Aksum,English;Ethics;Economics;Social Studies,5-6;9-10;11-12;7-8,250.0,,True
+BRSNgjsxMJbhLs5TVjfXrCDE3JB3,tutor,yossef tesfay,ad,Amharic;Biology;History;Geography,5-6;7-8;9-10,230.0,,True
+DRzN2ih64uMGEuOjZprMovy5fW03,tutor,frtuna,Mekelle,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12,250.0,,True
+DsrjfIvXpFQpDBqLNpFTvNByp0u2,tutor,tsegazeab,Mekelle,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4,250.0,,True
+ECcTDZvf9vOkwuc4xcbqBVNSFot1,tutor,lemlem,Adwa,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12,200.0,,True
+FtYF3kPPyFeyVUpTPRigfsV0YDl2,tutor,tsehay,Mekelle,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4,220.0,,True
+H8qRTDIPyASubMbX088q4u5PTkJ2,tutor,solomon,Mekelle,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10,200.0,,True
+PSYR1jp4fSTQPHzlhkpoPHVPbCm2,tutor,selam,Mekelle,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12,200.0,,True
+PjAMGPVThoTMSJa9VXigyJuNy5y2,tutor,meaza,Aksum,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12,350.0,,True
+QJ8HvLQFoQaTr16OvNXZdZpnj7F3,tutor,etsub,Adwa,Physics;Chemistry;Biology,9-10;11-12;5-6,280.0,,True
+R15YifvlSQRs3vxkbBQIrxwfz1M2,tutor,dawit,Mekelle,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10,250.0,,True
+UAUK5c6yUiPDhemJ4nHJIV4MLuE3,tutor,yonatan,Adwa,English;Mathematics;Chemistry;Geography,KG;7-8;5-6,190.0,,True
+XyrOyVhu7pdsPk1WS7gubK89bjH2,tutor,eyob,Aksum,Amharic;Economics;Social Studies;Mathematics;Physics;Chemistry;English;Biology;Tigrigna;History;ICT;Physical Education;Ethics;Civics;Geography;Art,KG;5-6;1-4;9-10;7-8;11-12,250.0,,True
+Y1xiSEf7OsQabrNMK786vsstN702,tutor,atsede,Mekelle,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12,300.0,,True
+YIeOeuPVRHTW01YOwKwSAxIVzGO2,tutor,Hayat,Mekelle,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12,200.0,,True
+eOQddar3QtZyhchS9WDKPAXZhis2,tutor,alem,Mekelle,English,,400.0,,True
+exMEFoTNtJab9zbdtPUirylPR0S2,tutor,seble,Mekelle,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12,250.0,,True
+iknR9qbLh9ZVXW6DLCa24hv0hq23,tutor,tirhas,Mekelle,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6,200.0,,True
+k2kncfGm6FfoATWUjyeqbmCCBDm2,tutor,estifanos,Adwa,Amharic;Biology;Social Studies,5-6;11-12,330.0,,True
+l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,tutor,rahel,Aksum,Mathematics;Physics;Biology,7-8;11-12;KG,330.0,,True
+lMrF4YtWI8Q0wmWhNs4r2bKK9q53,tutor,netsanet,Mekelle,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6,200.0,,True
+lWf0JlxAwYNMWCFCSjovpzAOtBZ2,tutor,jemal,Adwa,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12,230.0,,True
+nll9dUGXHMYqJxqYoLQeJo2rpGL2,tutor,natnael,Adwa,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12,150.0,,True
+v3njZn6muKYDNyM2HsyWgMrU8mi2,tutor,abdelaziz,Mekelle,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12,280.0,,True
+xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,tutor,almaz,Aksum,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8,210.0,,True
+y5E27NmxoUQt1jMjpo2lFZSrwPn1,tutor,Hiyab,Mekelle,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12,350.0,,True

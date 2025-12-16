@@ -1,0 +1,861 @@
+learnerId,learnerCity,tutorId,tutorCity,score_mf,tutorName,tutorSubjects,tutorGrades
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.7326236963272095,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.6983609199523926,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.6547626256942749,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.5896549224853516,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5342968702316284,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.5076093673706055,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.5018904209136963,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.46284452080726624,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.45983362197875977,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.4457234740257263,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.4433325231075287,alem,English,nan
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.4204038381576538,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.3996678590774536,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.3931584358215332,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.3891681730747223,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.38501209020614624,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.3792494535446167,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.37776482105255127,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.37361517548561096,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+2QSghpegl6Tlu2niVa1evismWyL2,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.3610116243362427,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.5874673128128052,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.5517777800559998,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.5474458336830139,alem,English,nan
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.5440617799758911,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.5309942960739136,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.49460455775260925,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.4557397961616516,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.44903117418289185,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.4107798635959625,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.40708768367767334,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.4005698561668396,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.3865635097026825,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.35433003306388855,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.35322049260139465,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.35077905654907227,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.35031336545944214,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.34393417835235596,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.34202784299850464,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.3278897702693939,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+3p9IDe0ZGxUknTIMim6vwt5QX2h2,Aksum,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.30655187368392944,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,2.2766470909118652,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.917392373085022,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.895653247833252,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.8788803815841675,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.8309121131896973,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.7994853258132935,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.7598263025283813,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.7236440777778625,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.7194433212280273,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.7148715853691101,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.6449615359306335,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.6405735015869141,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.6032100915908813,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.5974429845809937,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.588519811630249,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.5718856453895569,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.521186113357544,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.47194570302963257,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.4591662287712097,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+4kI3CqHD3Pbi3d6tXZqArZ7T9403,Adwa,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.4573913514614105,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.25670325756073,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,1.1090590953826904,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.9035429954528809,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.8058337569236755,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.661395251750946,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.6553359031677246,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.6146124601364136,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.5697047710418701,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.5316435694694519,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.5097434520721436,alem,English,nan
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.4788581132888794,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.45764970779418945,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.43805718421936035,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.4364071786403656,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.40652549266815186,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.38860318064689636,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.3844676911830902,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.36292558908462524,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.34789448976516724,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+8NKD5ayXWuXyyw4194apizeT1SJ2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.34483301639556885,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,2.328911304473877,alem,English,nan
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,1.823057770729065,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.5957374572753906,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.3681880235671997,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,1.0115742683410645,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,1.0103123188018799,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.9605923295021057,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.9530296921730042,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.9058636426925659,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.8770707845687866,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.7840120792388916,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.7488481402397156,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.7256302833557129,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.6511512994766235,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.6055132746696472,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.5776355266571045,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5585625171661377,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.5438787937164307,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.47540798783302307,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+8PRVS4wr6zOZA46ZXLEkB9Frand2,Mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.4517746567726135,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.4779983162879944,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.47343000769615173,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.47246062755584717,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.4602164626121521,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.42891520261764526,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.426535427570343,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.42278555035591125,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.41818737983703613,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.4038408398628235,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.4015573561191559,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.39466607570648193,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.3781622052192688,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.37274736166000366,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.33310338854789734,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.32722973823547363,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.30368342995643616,alem,English,nan
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.29803183674812317,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.29362303018569946,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.2714429795742035,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+8aKU74yqLvNPXamu42yDsiCkZJX2,Adama,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.2669902443885803,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.9659056663513184,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.6202430725097656,alem,English,nan
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.5610983371734619,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.5490812063217163,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.4820011854171753,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.48114150762557983,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.4747937321662903,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.4579307734966278,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.443133682012558,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.41903480887413025,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.4187239706516266,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,6ZhMaFEz2JR9djnjIWdVgPRibWl2,Aksum,0.3151005804538727,hlina,English;Ethics;Economics;Social Studies,5-6;9-10;11-12;7-8
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.29855063557624817,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.2843075692653656,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.2803099751472473,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.27726462483406067,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.2735391855239868,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,XyrOyVhu7pdsPk1WS7gubK89bjH2,Aksum,0.25535789132118225,eyob,Amharic;Economics;Social Studies;Mathematics;Physics;Chemistry;English;Biology;Tigrigna;History;ICT;Physical Education;Ethics;Civics;Geography;Art,KG;5-6;1-4;9-10;7-8;11-12
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.24547964334487915,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+Dk4QUd3IXpPavJZ4p4exrH82kst1,Adwa,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.24279120564460754,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,1.7079929113388062,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.104835867881775,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,1.0639680624008179,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.9726398587226868,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.9637833833694458,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.9316389560699463,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.8234797716140747,alem,English,nan
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.7728579044342041,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.7257886528968811,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.6173801422119141,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.6026511192321777,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.5879034399986267,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.5470470190048218,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.5433374047279358,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.5027450919151306,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.46241700649261475,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.45166248083114624,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.4259052574634552,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.39634469151496887,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+Ed0o9ZhgnBayPZEtwT87RnuEfVc2,mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.3960801064968109,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,1.8002783060073853,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,1.66293466091156,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.260555386543274,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.194972276687622,alem,English,nan
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,1.0260956287384033,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.9357184171676636,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.9192820191383362,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.9176409840583801,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.8981047868728638,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.7635588645935059,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.7329379320144653,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.713404655456543,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.6792572736740112,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.6154239773750305,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.5881283283233643,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.5857166051864624,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.5671130418777466,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.5478011965751648,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.5163995623588562,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+FoYjiFalbmSUknqEJnMODusQlEh1,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.487515389919281,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,1.9138003587722778,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.097416639328003,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.0057947635650635,alem,English,nan
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.915984570980072,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.894901692867279,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.8914597034454346,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.8844637274742126,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.8822696208953857,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.8205979466438293,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.7610973119735718,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.7391891479492188,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.6822389960289001,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.6151306629180908,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.6044914722442627,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.5898574590682983,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.5667345523834229,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5665138363838196,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.558025598526001,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.5129636526107788,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+GwyE5cIjvsV6gx6fObjjgNhIDZk2,Mekelle,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.4925236701965332,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,1.6652876138687134,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,1.1569836139678955,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,1.1368629932403564,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.9835419654846191,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.8738710284233093,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.869614839553833,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.8586919903755188,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.7773236632347107,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.6755488514900208,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.6218491196632385,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.6112837791442871,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.5819017291069031,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.552191972732544,alem,English,nan
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.5491688847541809,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5158364772796631,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.5036047697067261,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.4896862208843231,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,6ZhMaFEz2JR9djnjIWdVgPRibWl2,Aksum,0.44589340686798096,hlina,English;Ethics;Economics;Social Studies,5-6;9-10;11-12;7-8
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.414605975151062,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+H7GjQ2jzsLUdzLeq8XavGDvPzVF2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.39867931604385376,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,1.6244615316390991,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.338856816291809,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.3148635625839233,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,1.2015552520751953,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,1.0642352104187012,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.910321056842804,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.8778877258300781,alem,English,nan
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.8265782594680786,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.7772709727287292,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.7593924403190613,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.7380498051643372,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.6701457500457764,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.6304939389228821,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.6175711750984192,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.6173304915428162,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.6141974329948425,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5846438407897949,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.5785723328590393,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.5203385353088379,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+MJDW6XaXCzUa8XWXLaa7YNpIoOj2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.4844132363796234,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,1.7573925256729126,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,1.153080701828003,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.981340765953064,alem,English,nan
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.9079521894454956,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.8910789489746094,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.8306169509887695,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.7883453965187073,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.7410016655921936,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.7319235801696777,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.6401357054710388,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.6384912729263306,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.5939655900001526,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.5930199027061462,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.5795085430145264,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.5677217245101929,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.5473116040229797,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5306059718132019,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,6ZhMaFEz2JR9djnjIWdVgPRibWl2,Aksum,0.512658953666687,hlina,English;Ethics;Economics;Social Studies,5-6;9-10;11-12;7-8
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.4859307110309601,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+N06PgYSUkpPgQUGvFj893yL1r6u1,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.484319269657135,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.7421472668647766,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.7178817987442017,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.6930831074714661,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.6200065612792969,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.6151195764541626,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5913273096084595,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.5811809301376343,alem,English,nan
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.5338031649589539,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.504689633846283,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.4829520583152771,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.4811258018016815,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.47961536049842834,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.4720761775970459,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.43552839756011963,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.4141051769256592,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.40105926990509033,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.3983345627784729,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.3740527331829071,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.35583484172821045,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+OI0mn997cWhLXtMGnApMVhVhRYK2,Mekelle,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.3519086241722107,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.6478875279426575,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.5359711647033691,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.503283679485321,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.4482561945915222,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.3954527676105499,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.3911970257759094,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.38226425647735596,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.3612481951713562,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.36009225249290466,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.3570459485054016,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.3547746539115906,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.3337201774120331,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.3257138133049011,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.3142416477203369,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.3108980059623718,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.306924432516098,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.29452383518218994,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.2837175726890564,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.27495327591896057,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+PSFvpiUPJrQeTAzWmECBvSTzwSv1,Aksum,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.27228742837905884,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,2.088569164276123,alem,English,nan
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.9868432879447937,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.983170747756958,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.905386209487915,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.86285400390625,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.8131889700889587,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.800102949142456,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.7016277313232422,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.6818171739578247,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.6639015674591064,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.6313518285751343,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.6292038559913635,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.6201540231704712,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.58555006980896,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.55327308177948,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.49476656317710876,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.4696948230266571,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.4231337308883667,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.3966067433357239,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+QhXO9vqDifgU6s6qnYXbAW3QmAZ2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.39132899045944214,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,2.0089879035949707,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,1.532094120979309,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.2391310930252075,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.8678462505340576,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.8286103010177612,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.789196252822876,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.7878683805465698,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.7707965970039368,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.754265546798706,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.7503345608711243,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.6905559301376343,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.6879901885986328,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.6602737903594971,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.6259927749633789,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.5953514575958252,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.5297490358352661,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.49192747473716736,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.48963481187820435,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.4870849549770355,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+QtV8VOFU1sNay7hsRZhR8dXgqO42,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.47783949971199036,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.6890971660614014,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.6861290335655212,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.5982201099395752,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.5972165465354919,alem,English,nan
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.4638270139694214,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.43119123578071594,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.3990252614021301,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.39067932963371277,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.3896889388561249,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.3869512677192688,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.3717042803764343,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.3714355230331421,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.36891114711761475,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.3628910183906555,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.3557407557964325,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.34726548194885254,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.346284419298172,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.3421883285045624,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.33672869205474854,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+S6akV3AB2yYkQTkeyrgXc0s3iFA3,Hawassa,6ZhMaFEz2JR9djnjIWdVgPRibWl2,Aksum,0.33126217126846313,hlina,English;Ethics;Economics;Social Studies,5-6;9-10;11-12;7-8
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,2.0149619579315186,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,1.0202964544296265,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.8404061794281006,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.7502357959747314,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.6951035261154175,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.669623851776123,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.6506056785583496,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.6470395922660828,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.6361343860626221,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.6174070835113525,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.6094071865081787,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.577090859413147,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.5716547966003418,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.5601391792297363,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5370378494262695,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.5257321000099182,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.5205807089805603,alem,English,nan
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.4846019446849823,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.47079282999038696,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+VcGJHZR5zHPmR3O9KGrDQxqnxKv2,Adama,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.46731191873550415,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.689358115196228,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.6737582087516785,alem,English,nan
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.6227254867553711,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.6129977703094482,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.5602554678916931,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5336095094680786,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.5197386145591736,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.5182799696922302,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.5139392018318176,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.5066454410552979,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.502224862575531,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.4874963164329529,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.48012420535087585,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.4731152057647705,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.4553149342536926,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.45443159341812134,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.4434826374053955,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.4154004752635956,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.35474085807800293,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+XDoeMAJsNTU47SLjkcQD2zWAyG23,adwa,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.35351884365081787,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,2.110217571258545,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,1.548422932624817,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,1.1516211032867432,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.0549509525299072,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.9582843780517578,alem,English,nan
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.936220645904541,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.8686650991439819,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.861491858959198,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.8067372441291809,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.7605595588684082,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.7023745775222778,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.673811674118042,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.6278774738311768,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.5809082388877869,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.5703305602073669,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.47020870447158813,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.45847171545028687,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.453689843416214,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.4414392411708832,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+a1NsNfyD18eKSLE2tNAW8OClVt83,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.4301999807357788,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.4558972716331482,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.44600576162338257,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.4372793138027191,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.4354504346847534,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.3935823142528534,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.37989526987075806,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.3631969690322876,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.330059677362442,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.2872140407562256,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.26692962646484375,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.2577515244483948,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.2568974196910858,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.2510695457458496,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.25034481287002563,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.22027166187763214,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.19880741834640503,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.17464827001094818,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.1642075479030609,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.1610269546508789,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+d3xrXhfwrUNfrV59Z90p8fAavW83,Adwa,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.154430091381073,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,2.092799186706543,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,1.1925222873687744,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.8926519155502319,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.8479709625244141,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.7578426599502563,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.7479075789451599,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.64427250623703,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.6257598400115967,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.6202154755592346,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.5870736837387085,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.5559162497520447,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.5519012212753296,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.5363664031028748,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.5240273475646973,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.5217029452323914,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.49520912766456604,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.49481111764907837,alem,English,nan
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.4890638291835785,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.4617515802383423,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+dSGTeIxN5IXaV48Zn3tA2eOKOby2,Addis Ababa,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.4440101683139801,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,1.2576205730438232,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,1.1475015878677368,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.9493343830108643,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.9332621097564697,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.7706582546234131,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.7570859789848328,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.7333565950393677,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.7306448817253113,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.718299150466919,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.7054449319839478,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.6949639916419983,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.6860470771789551,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.6788433790206909,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.6527441740036011,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.6466848850250244,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.5716940760612488,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.5634546279907227,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.5315141081809998,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.5260453224182129,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+dVRKsBeCsYhPv2tMAoiP8W2PtmB2,Adwa,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.5187315940856934,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,2.1973657608032227,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.9151376485824585,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.8831125497817993,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.8663978576660156,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.8559136390686035,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.8535036444664001,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.7652380466461182,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.7323974370956421,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.673594057559967,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.6230558156967163,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.6194707155227661,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.587360143661499,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.5530775785446167,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.5494977831840515,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.5066231489181519,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.4807690382003784,alem,English,nan
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.4503207504749298,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.4341627359390259,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.43337154388427734,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+g664koL813TXW9lMsT1t0o00ndt2,Addis Ababa,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.42442017793655396,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,1.624670147895813,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.9966062307357788,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.8116005659103394,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.7422528862953186,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.7342911958694458,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.6943069696426392,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.6926286220550537,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.6579661965370178,alem,English,nan
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.6296775341033936,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5841773152351379,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.5449665784835815,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.5133945941925049,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.4875354468822479,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.45066314935684204,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.44578826427459717,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.4427981376647949,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.4249475300312042,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.4244261682033539,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.3995722830295563,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+gyh2H0YwTHMAjsA1MSskRDQEFws2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.39651596546173096,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,1.7781888246536255,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.2422453165054321,alem,English,nan
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.1039000749588013,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.9775103330612183,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.8907894492149353,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.8417288661003113,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.7638487815856934,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.753147304058075,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.6960857510566711,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.6454081535339355,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.6399811506271362,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.6347130537033081,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.6272454857826233,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.5915243029594421,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.5657787919044495,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.5203014612197876,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.49801647663116455,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.49280625581741333,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.4585728347301483,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+hWM8fGVR0dXoO6IPzCYwiy6SIkG3,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.4540686011314392,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,1.8349837064743042,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.2575604915618896,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.1232421398162842,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,1.0776350498199463,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,1.062335729598999,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.0031622648239136,alem,English,nan
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.915036678314209,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.8909808397293091,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.8743324875831604,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.8079112768173218,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.7773698568344116,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.7344400882720947,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.694388747215271,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.6337586045265198,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.5903862118721008,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5302384495735168,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.4494285583496094,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.42933598160743713,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,XyrOyVhu7pdsPk1WS7gubK89bjH2,Aksum,0.3967413306236267,eyob,Amharic;Economics;Social Studies;Mathematics;Physics;Chemistry;English;Biology;Tigrigna;History;ICT;Physical Education;Ethics;Civics;Geography;Art,KG;5-6;1-4;9-10;7-8;11-12
+iVGnW358jPevkAhMfbjqrEYtd7r1,Aksum,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.3924749195575714,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,2.0100648403167725,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,1.7428810596466064,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.0814228057861328,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.9529764652252197,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.8053290843963623,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.8037644624710083,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.7903589010238647,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.7746119499206543,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.7567737102508545,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.7305716276168823,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.6470838785171509,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.6466447710990906,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.6423454880714417,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.6310119032859802,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.615466833114624,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.5664479732513428,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.5659006237983704,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5526574850082397,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.5333429574966431,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+lZgzVnsom0cCRgqbtWEkI6thRI73,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.5043802261352539,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,1.978980541229248,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,1.513999581336975,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.4045480489730835,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,1.1001019477844238,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.020496129989624,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.9236753582954407,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.872692883014679,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.7201518416404724,alem,English,nan
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.7192994952201843,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.7172233462333679,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.7011022567749023,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.6574294567108154,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.6453359723091125,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.6292002201080322,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.6187034845352173,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.5961095690727234,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.5909872055053711,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.5706595182418823,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.5538631677627563,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+n9FSkm6L0dbm5xZU5hYCCSYIqOI3,Mekelle,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.5531926155090332,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,2.5329346656799316,alem,English,nan
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.3730177879333496,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,1.3620991706848145,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.301215410232544,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,1.1345291137695312,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.989145815372467,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.9856063723564148,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.9671097993850708,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.9398894309997559,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.8796637654304504,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.7284831404685974,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.6938730478286743,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.6910182237625122,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.6389681100845337,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.6191033720970154,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.609207272529602,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.6073400974273682,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.6038523316383362,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.5448494553565979,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+o9zp3QqHZefRfJZiVZt7M50uKHf2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.4272230863571167,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,1.4814361333847046,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.7882895469665527,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.564781129360199,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.5500916242599487,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.541334867477417,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.5410518050193787,alem,English,nan
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.5264276266098022,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.5109798312187195,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.4956301748752594,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.4936174154281616,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.4729817509651184,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.472011923789978,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.46627897024154663,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.4541703760623932,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.4236888289451599,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.40653419494628906,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.39885270595550537,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.38926512002944946,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.38867220282554626,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+p5R2FocRjXgb6las6vZEnIEeYXu2,adwa,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.3615380525588989,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,1.953473448753357,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.018181324005127,alem,English,nan
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.9671611785888672,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.9290173649787903,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.9255597591400146,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.9152906537055969,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.880215048789978,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.8381816148757935,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.8052244186401367,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.7768043279647827,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.7667733430862427,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.766516923904419,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.6864179372787476,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.6460281014442444,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.6056634187698364,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.6004231572151184,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.5786811709403992,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5735601186752319,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.565972626209259,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+r1mdbzvd9BN5XqWvoIRIRAuyToK2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.5196235775947571,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,2.1413073539733887,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.8413678407669067,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.542412519454956,alem,English,nan
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,1.5176225900650024,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,1.2355245351791382,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,1.160724401473999,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,1.0218539237976074,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.9634519815444946,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.950027585029602,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.8668127059936523,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.8376050591468811,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.8158212900161743,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.8058258891105652,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.7788454294204712,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.7446392774581909,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.7181612849235535,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.6930371522903442,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.615609884262085,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.6148641109466553,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+rphBr9aAB5YB9teRoi7yWnRSLmy1,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.6025795936584473,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,1.8743325471878052,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,1.3840070962905884,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,1.1483800411224365,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.05108642578125,alem,English,nan
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,1.0477893352508545,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.9240855574607849,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.7972826361656189,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.6377277374267578,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.6297253966331482,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.584355890750885,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.5830425024032593,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.574781060218811,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.544725239276886,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.5386015772819519,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,6ZhMaFEz2JR9djnjIWdVgPRibWl2,Aksum,0.5153385400772095,hlina,English;Ethics;Economics;Social Studies,5-6;9-10;11-12;7-8
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5071537494659424,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5069987773895264,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.4503554403781891,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.44489455223083496,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+tpQfofgNcOTYSgtzmeP2slhrfRh1,Mekelle,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.44489428400993347,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.6682029962539673,alem,English,nan
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,1.3675607442855835,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.8849120140075684,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.8571646809577942,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.8177264332771301,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.8079670667648315,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.7932620048522949,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.7540525794029236,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.6685899496078491,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.6254004240036011,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.5681152939796448,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.5645703673362732,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5603970289230347,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.5418272018432617,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.5236468315124512,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.513999879360199,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.47217273712158203,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.4465082585811615,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.37052369117736816,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+ugSQHvQw57RkVnchx74wr5BIUp02,Mekelle,6ZhMaFEz2JR9djnjIWdVgPRibWl2,Aksum,0.36772871017456055,hlina,English;Ethics;Economics;Social Studies,5-6;9-10;11-12;7-8
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,2.5275821685791016,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,1.0760867595672607,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.9280462861061096,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.8890091776847839,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.8768062591552734,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,PjAMGPVThoTMSJa9VXigyJuNy5y2,Aksum,0.8149868249893188,meaza,Amharic;Chemistry;Mathematics;Physics,7-8;9-10;11-12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.7669368386268616,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.752228856086731,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.728114128112793,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.7064277529716492,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.6171789765357971,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.6003570556640625,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.5736807584762573,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.5517515540122986,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.5170284509658813,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.49361953139305115,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.41594696044921875,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.3998537063598633,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,XyrOyVhu7pdsPk1WS7gubK89bjH2,Aksum,0.3893747329711914,eyob,Amharic;Economics;Social Studies;Mathematics;Physics;Chemistry;English;Biology;Tigrigna;History;ICT;Physical Education;Ethics;Civics;Geography;Art,KG;5-6;1-4;9-10;7-8;11-12
+ujIwgqVsRbSpTrQkffQvn48zVy52,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.37459975481033325,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,1.1279823780059814,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,1.1063613891601562,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.8078296780586243,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.7704022526741028,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.6916465163230896,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.6874034404754639,alem,English,nan
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.6374602317810059,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.6310141086578369,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.6305835247039795,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.628974199295044,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.6149579286575317,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5611961483955383,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.507369875907898,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.4780865013599396,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.4631069004535675,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.4528806209564209,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.4509844481945038,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,k2kncfGm6FfoATWUjyeqbmCCBDm2,Adwa,0.44478049874305725,estifanos,Amharic;Biology;Social Studies,5-6;11-12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.4329737424850464,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+v3jjcvBOFbS0gDrinWReQsK6pPt2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.43008697032928467,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.8097035884857178,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,1.6706136465072632,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,1.2703009843826294,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.1543903350830078,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,1.1095696687698364,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.9709059596061707,alem,English,nan
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.9048919677734375,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.8411270380020142,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.814016580581665,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.7904738187789917,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.7684328556060791,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.7551886439323425,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.6305387020111084,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.5868152976036072,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.5865633487701416,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.5838708281517029,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5642593502998352,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.5076828002929688,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.49462267756462097,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+xGXCi2XliDOICsxuqCNnAal7W8e2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.47478386759757996,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,1.8515100479125977,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.8104795813560486,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.7904012203216553,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.726014256477356,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.7248514890670776,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.7206375598907471,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.7062323689460754,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.615833580493927,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.6093401312828064,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,0.5972714424133301,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.5918291807174683,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.5751299858093262,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.574133574962616,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.5709171891212463,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.5503014326095581,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.5061164498329163,alem,English,nan
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.5023759603500366,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.4627401828765869,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.44855204224586487,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+yKLLNo03cBftcJrHJG3AzfjO13x1,Adwa,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.445248544216156,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,2.102712631225586,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,1.3177508115768433,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.1861575841903687,alem,English,nan
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,1.029829740524292,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.011961579322815,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.8377925157546997,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.8158264756202698,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.7679070234298706,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,4JIeujA4Dnhs4idBMx38ZtXFoQf1,Mekelle,0.7565515637397766,kebron,Mathematics;Chemistry;Physics;Biology;English;Social Studies;Economics,7–8;9–10;11–12
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.7395094037055969,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.7320871353149414,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.7121545076370239,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,2cPC4cc64pNHZ7sIOqBv7d6qup33,Adwa,0.6811362504959106,nahom,Mathematics;Chemistry;Biology;English;ICT,7-8;11-12;9-10
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.640721321105957,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.6268370747566223,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.5792711973190308,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,321QGCtd7XRzGddayieKvaHdDm23,Aksum,0.5783495903015137,fisha,Mathematics;Physics;Biology,1-4;7-8;9-10;5-6
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.5585817694664001,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.5396066308021545,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+zIkXwaQxKlhPUmvC5KYrPEKms7F2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.4224202632904053,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,0.8380990028381348,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.8010634779930115,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.7539554834365845,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,0.7337052822113037,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,DRzN2ih64uMGEuOjZprMovy5fW03,Mekelle,0.6549856066703796,frtuna,Mathematics;English;Amharic;Physics;Biology;Chemistry;Economics;Ethics;Physical Education;Geography;Civics;History;ICT;Art;Social Studies,KG;5–6;7–8;9–10;11–12
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.6292802095413208,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,0.6093704104423523,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,0.5338776111602783,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.4886365532875061,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,xFlzvKYWz2PrAN2Bd8fbiPcNdtI2,Aksum,0.48523855209350586,almaz,Mathematics;Physics;Chemistry;History,9-10;11-12;7-8
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,0.46743881702423096,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.45948559045791626,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.4427720010280609,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.42292270064353943,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.41667598485946655,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,0.40719419717788696,alem,English,nan
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.4042293429374695,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,QJ8HvLQFoQaTr16OvNXZdZpnj7F3,Adwa,0.37764495611190796,etsub,Physics;Chemistry;Biology,9-10;11-12;5-6
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,l6r6bVZXV8UiQd1Z6Y90tbxnh4m2,Aksum,0.3501046299934387,rahel,Mathematics;Physics;Biology,7-8;11-12;KG
+zRYU58qTQggByTV4HTmLqtSxwnp1,Mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.34638288617134094,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,R15YifvlSQRs3vxkbBQIrxwfz1M2,Mekelle,1.597085952758789,dawit,Mathematics;Physics;Chemistry;Biology,7-8;11-12;5-6;9-10
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,0W7NM9Ie82Ta9E6BWE569HKVAE42,Mekelle,1.2684228420257568,mehari,Mathematics;Physics;Civics;Biology;ICT;English,9-10;11-12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,PSYR1jp4fSTQPHzlhkpoPHVPbCm2,Mekelle,1.2083029747009277,selam,Mathematics;Physics;Chemistry;English;Biology;ICT;Economics,KG;1–4;5–6;7–8;9–10;11–12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,iknR9qbLh9ZVXW6DLCa24hv0hq23,Mekelle,1.162142038345337,tirhas,Chemistry;Mathematics;English;Tigrigna,KG;1–4;5–6
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,eOQddar3QtZyhchS9WDKPAXZhis2,Mekelle,1.08357834815979,alem,English,nan
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,H8qRTDIPyASubMbX088q4u5PTkJ2,Mekelle,1.0326800346374512,solomon,Mathematics;Physics;Chemistry;English,7-8;11-12;1-4;5-6;9-10
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,v3njZn6muKYDNyM2HsyWgMrU8mi2,Mekelle,1.0198570489883423,abdelaziz,Biology;English;Mathematics,5-6;1-4;7-8;9-10;11-12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,Y1xiSEf7OsQabrNMK786vsstN702,Mekelle,0.9932733178138733,atsede,Mathematics;Physics;Chemistry,5–6;7–8;9–10;11-12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,y5E27NmxoUQt1jMjpo2lFZSrwPn1,Mekelle,0.7967339158058167,Hiyab,Mathematics;Physics;Biology;ICT,7-8;9-10;11-12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,lMrF4YtWI8Q0wmWhNs4r2bKK9q53,Mekelle,0.7842873930931091,netsanet,Mathematics;English;Amharic;Physics;Tigrigna;Biology;Civics;Chemistry;Geography;History;Physical Education;ICT;Art;Ethics;Social Studies;Economics,1-4;KG;7-8;9-10;11-12;5-6
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,0l2f2PHXtNRUMCFN9TX6TIywPhx1,Mekelle,0.7161279916763306,teddy,Mathematics;Physics;Chemistry;Biology,KG;7-8;9-10;1-4;11-12;5-6
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,DsrjfIvXpFQpDBqLNpFTvNByp0u2,Mekelle,0.7104161381721497,tsegazeab,Mathematics;English;Biology;History;ICT;Physics,1–4;KG;9-10;11-12;7-8;1-4
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,FtYF3kPPyFeyVUpTPRigfsV0YDl2,Mekelle,0.7008097171783447,tsehay,Mathematics;English;Tigrigna;Chemistry;Amharic;Biology;Physics;History;Geography;ICT;Art;Physical Education;Ethics;Social Studies;Civics;Economics,KG;5-6;9-10;11-12;7-8;1-4
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,YIeOeuPVRHTW01YOwKwSAxIVzGO2,Mekelle,0.622048556804657,Hayat,Mathematics;Physics;Chemistry;History;Biology;English,5-6;7-8;11-12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,exMEFoTNtJab9zbdtPUirylPR0S2,Mekelle,0.6132643818855286,seble,Mathematics;Chemistry;English;Biology;Physics,KG;1–4;5–6;7–8;9–10;11–12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,ECcTDZvf9vOkwuc4xcbqBVNSFot1,Adwa,0.589820146560669,lemlem,Mathematics;English;Amharic;Physics;Tigrigna;Chemistry;Biology;Civics;History;Geography;Physical Education;ICT;Ethics;Art;Social Studies;Economics,KG;1-4;5-6;7-8;9-10;11-12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,UAUK5c6yUiPDhemJ4nHJIV4MLuE3,Adwa,0.5600305795669556,yonatan,English;Mathematics;Chemistry;Geography,KG;7-8;5-6
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,nll9dUGXHMYqJxqYoLQeJo2rpGL2,Adwa,0.5372895002365112,natnael,English;Mathematics;Physics;Chemistry,5-6;7-8;9-10;11-12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,lWf0JlxAwYNMWCFCSjovpzAOtBZ2,Adwa,0.5319808721542358,jemal,Mathematics;Biology;Chemistry;Physics;ICT;Geography;History;Social Studies,7-8;9-10;11-12
+zttddeiUKqQUGqdtj7TOeCSwYhB2,Mekelle,0D1aw9Bp5LPNSdnvWGFYNi1PWZE3,Adwa,0.529310405254364,belay,Mathematics;Physics;Amharic;Tigrigna;Chemistry,KG;9-10;7-8;5-6;11-12;1-4
