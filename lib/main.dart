@@ -14,11 +14,13 @@ import 'firebase_options.dart';
 import 'providers/notification_provider.dart';
 import 'providers/rating_provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: '.env');
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -29,7 +31,7 @@ void main() async {
     cacheSizeBytes: Settings.CACHE_SIZE_UNLIMITED,
   );
   final projectId = FirebaseFirestore.instance.app.options.projectId;
-  debugPrint('🔥 Flutter is using Firebase project: $projectId');
+  debugPrint('Flutter is using Firebase project: $projectId');
 
   runApp(const MentorMeApp());
 }
