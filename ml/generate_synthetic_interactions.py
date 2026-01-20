@@ -71,8 +71,8 @@ def load_learners_and_tutors():
     if not os.path.exists(TUTORS_CSV):
         raise FileNotFoundError(f"{TUTORS_CSV} not found. Did you run export_learners_tutors.py?")
 
-    learners = pd.read_csv(data/learners.csv)
-    tutors = pd.read_csv(data/tutors.csv)
+    learners = pd.read_csv(LEARNERS_CSV)
+    tutors = pd.read_csv(TUTORS_CSV)
 
     # --- Adjust these depending on your export script ---
     learner_id_col = _find_id_column(learners, ["learnerId", "uid", "id"])

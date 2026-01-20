@@ -1,7 +1,7 @@
 {
-  "n_learners": 43,
-  "n_tutors": 31,
+  "n_learners": 52,
+  "n_tutors": 32,
   "n_factors": 32,
-  "global_bias": 0.18927514553070068,
+  "global_bias": 0.3937251567840576,
   "mf_ratings_path": "data/mf_ratings.csv"
 }

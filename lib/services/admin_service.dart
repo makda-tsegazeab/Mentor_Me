@@ -34,10 +34,29 @@ class AdminService {
     required String adminId,
     required bool suspended,
     String? note,
+    String? code,
+    int? score,
+    String? level,
+    Map<String, int>? rubric,
   }) async {
     final batch = FirebaseFirestore.instance.batch();
     final userRef = _users.doc(userId);
-    batch.set(userRef, {'suspended': suspended}, SetOptions(merge: true));
+    final userUpdate = <String, dynamic>{
+      'suspended': suspended,
+    };
+    if (suspended) {
+      userUpdate['suspendedAt'] = FieldValue.serverTimestamp();
+      if (code != null) userUpdate['suspensionCode'] = code;
+      if (score != null) userUpdate['suspensionScore'] = score;
+      if (level != null) userUpdate['suspensionLevel'] = level;
+      if (note != null && note.trim().isNotEmpty) {
+        userUpdate['suspensionNote'] = note.trim();
+      }
+      if (rubric != null) userUpdate['suspensionRubric'] = rubric;
+    } else {
+      userUpdate['suspensionClearedAt'] = FieldValue.serverTimestamp();
+    }
+    batch.set(userRef, userUpdate, SetOptions(merge: true));
 
     final auditRef = _suspensions.doc();
     batch.set(auditRef, {
@@ -45,6 +64,10 @@ class AdminService {
       'adminId': adminId,
       'suspended': suspended,
       'note': note ?? '',
+      'code': code,
+      'score': score,
+      'level': level,
+      'rubric': rubric,
       'createdAt': FieldValue.serverTimestamp(),
     });
 

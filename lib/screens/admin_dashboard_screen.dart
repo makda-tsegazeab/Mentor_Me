@@ -110,6 +110,61 @@ class _AdminUserCardState extends State<AdminUserCard> {
   final _noteController = TextEditingController();
   final _suspensionNoteController = TextEditingController();
   bool _busy = false;
+  static const List<Map<String, String>> _suspensionCodes = [
+    {
+      'code': 'SAFETY_HARASSMENT',
+      'label': 'Safety or harassment',
+      'desc': 'Threats, harassment, stalking',
+    },
+    {
+      'code': 'FRAUD_IMPERSONATION',
+      'label': 'Fraud or impersonation',
+      'desc': 'Identity misuse, fake profiles',
+    },
+    {
+      'code': 'PAYMENT_ABUSE',
+      'label': 'Payment abuse',
+      'desc': 'Chargebacks or fee evasion',
+    },
+    {
+      'code': 'SPAM_BOT',
+      'label': 'Spam or automation',
+      'desc': 'Spam, bots, scraping',
+    },
+    {
+      'code': 'NO_SHOWS',
+      'label': 'Repeated no-shows',
+      'desc': 'Missed sessions without notice',
+    },
+    {
+      'code': 'POLICY_MINOR',
+      'label': 'Minor policy violation',
+      'desc': 'Low-impact policy issues',
+    },
+  ];
+
+  String _selectedSuspensionCode = _suspensionCodes.first['code']!;
+  int _harmScore = 0;
+  int _intentScore = 0;
+  int _frequencyScore = 0;
+  int _evidenceScore = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    final code = widget.userData['suspensionCode'];
+    if (code is String &&
+        _suspensionCodes.any((item) => item['code'] == code)) {
+      _selectedSuspensionCode = code;
+    }
+    final rubric = widget.userData['suspensionRubric'];
+    if (rubric is Map) {
+      _harmScore = _parseRubricValue(rubric['harm']);
+      _intentScore = _parseRubricValue(rubric['intent']);
+      _frequencyScore = _parseRubricValue(rubric['frequency']);
+      _evidenceScore = _parseRubricValue(rubric['evidence']);
+    }
+  }
 
   @override
   void dispose() {
@@ -157,6 +212,17 @@ class _AdminUserCardState extends State<AdminUserCard> {
 
   Future<void> _updateSuspension(bool nextValue) async {
     if (widget.adminId == null) return;
+    if (nextValue && _selectedSuspensionCode.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Select a suspension code before suspending.',
+            style: GoogleFonts.lexend(),
+          ),
+        ),
+      );
+      return;
+    }
     setState(() => _busy = true);
     try {
       await AdminService.updateSuspension(
@@ -164,6 +230,15 @@ class _AdminUserCardState extends State<AdminUserCard> {
         adminId: widget.adminId!,
         suspended: nextValue,
         note: _suspensionNoteController.text.trim(),
+        code: _selectedSuspensionCode,
+        score: _rubricScore,
+        level: _severityLevelValue,
+        rubric: {
+          'harm': _harmScore,
+          'intent': _intentScore,
+          'frequency': _frequencyScore,
+          'evidence': _evidenceScore,
+        },
       );
       _suspensionNoteController.clear();
       if (mounted) {
@@ -316,6 +391,103 @@ class _AdminUserCardState extends State<AdminUserCard> {
                   color: Colors.grey.shade500,
                 ),
               ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Suspension rubric',
+              style: GoogleFonts.lexend(
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
+            ),
+            const SizedBox(height: 8),
+            DropdownButtonFormField<String>(
+              value: _selectedSuspensionCode,
+              decoration: InputDecoration(
+                hintText: 'Select suspension code',
+                hintStyle: GoogleFonts.lexend(
+                  fontSize: 14,
+                  color: Colors.grey.shade500,
+                ),
+              ),
+              items: _suspensionCodes
+                  .map(
+                    (code) => DropdownMenuItem(
+                      value: code['code'],
+                      child: Text(
+                        '${code['label']}',
+                        style: GoogleFonts.lexend(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  )
+                  .toList(),
+              onChanged: (value) {
+                if (value == null) return;
+                setState(() => _selectedSuspensionCode = value);
+              },
+            ),
+            const SizedBox(height: 6),
+            Text(
+              _selectedCodeDescription,
+              style: GoogleFonts.lexend(
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey.shade600,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 10,
+              runSpacing: 10,
+              children: [
+                _scoreDropdown(
+                  label: 'Harm risk',
+                  value: _harmScore,
+                  onChanged: (v) => setState(() => _harmScore = v),
+                ),
+                _scoreDropdown(
+                  label: 'Intent',
+                  value: _intentScore,
+                  onChanged: (v) => setState(() => _intentScore = v),
+                ),
+                _scoreDropdown(
+                  label: 'Frequency',
+                  value: _frequencyScore,
+                  onChanged: (v) => setState(() => _frequencyScore = v),
+                ),
+                _scoreDropdown(
+                  label: 'Evidence',
+                  value: _evidenceScore,
+                  onChanged: (v) => setState(() => _evidenceScore = v),
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    'Score: $_rubricScore (0-8)',
+                    style: GoogleFonts.lexend(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.grey.shade700,
+                    ),
+                  ),
+                ),
+                Text(
+                  _severityLabel,
+                  style: GoogleFonts.lexend(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w700,
+                    color: _severityColor,
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 12),
             Row(
@@ -483,5 +655,70 @@ class _AdminUserCardState extends State<AdminUserCard> {
         ),
       ),
     );
+  }
+
+  int get _rubricScore =>
+      _harmScore + _intentScore + _frequencyScore + _evidenceScore;
+
+  String get _severityLabel {
+    if (_rubricScore <= 2) return 'Warning';
+    if (_rubricScore <= 5) return 'Temporary (24-72h)';
+    if (_rubricScore <= 7) return 'Extended (7-30d)';
+    return 'Permanent or review hold';
+  }
+
+  String get _severityLevelValue {
+    if (_rubricScore <= 2) return 'warning';
+    if (_rubricScore <= 5) return 'temporary';
+    if (_rubricScore <= 7) return 'extended';
+    return 'permanent';
+  }
+
+  Color get _severityColor {
+    if (_rubricScore <= 2) return Colors.green.shade700;
+    if (_rubricScore <= 5) return Colors.orange.shade700;
+    if (_rubricScore <= 7) return Colors.deepOrange.shade700;
+    return Colors.red.shade700;
+  }
+
+  String get _selectedCodeDescription {
+    final match = _suspensionCodes.firstWhere(
+      (item) => item['code'] == _selectedSuspensionCode,
+      orElse: () => _suspensionCodes.first,
+    );
+    return match['desc'] ?? '';
+  }
+
+  Widget _scoreDropdown({
+    required String label,
+    required int value,
+    required void Function(int) onChanged,
+  }) {
+    return SizedBox(
+      width: 160,
+      child: DropdownButtonFormField<int>(
+        value: value,
+        decoration: InputDecoration(
+          labelText: label,
+          labelStyle: GoogleFonts.lexend(fontSize: 12),
+          isDense: true,
+        ),
+        items: const [
+          DropdownMenuItem(value: 0, child: Text('0')),
+          DropdownMenuItem(value: 1, child: Text('1')),
+          DropdownMenuItem(value: 2, child: Text('2')),
+        ],
+        onChanged: (v) {
+          if (v == null) return;
+          onChanged(v);
+        },
+      ),
+    );
+  }
+
+  int _parseRubricValue(dynamic value) {
+    if (value is int) return value.clamp(0, 2).toInt();
+    if (value is num) return value.toInt().clamp(0, 2).toInt();
+    return 0;
   }
 }

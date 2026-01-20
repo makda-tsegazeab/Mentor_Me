@@ -1,0 +1,100 @@
+MentorMe Suspension and Reports Policy
+Version: 1.0
+Effective: 2026-01-20
+
+Purpose
+This policy defines how reports are handled and how suspension decisions are made.
+It aims to protect user safety, preserve platform integrity, and ensure fair, consistent decisions.
+
+Scope
+Applies to all users (students, parents, tutors, admins) and all in-app interactions.
+
+Definitions
+- Report: A user-submitted complaint about another user or content.
+- Suspension: Temporary or permanent restriction of account access.
+- Severity: Level of enforcement based on risk, intent, frequency, and evidence.
+- Code: A standardized reason category for enforcement.
+
+Report Intake and Handling
+1) Report channels
+   - In-app report flows.
+   - Admin-initiated review.
+2) Required report fields
+   - Reporter ID, reported user ID, report code, description, timestamp.
+   - Evidence attachments if available (screenshots, messages, logs).
+3) Acknowledgement
+   - Report acknowledged in the system with a reference ID.
+4) Triage
+   - Safety-related reports get priority review.
+   - Clear spam/bot evidence may be actioned immediately.
+
+Suspension Codes
+- SAFETY_HARASSMENT: Threats, harassment, stalking, or safety risk.
+- FRAUD_IMPERSONATION: Identity misuse, impersonation, forged credentials.
+- PAYMENT_ABUSE: Chargebacks, fee evasion, or payment manipulation.
+- SPAM_BOT: Spam, automation, scraping, or bulk unsolicited messages.
+- NO_SHOWS: Repeated no-shows without notice or agreement.
+- POLICY_MINOR: Low-impact policy violations.
+
+Severity Rubric
+Score each dimension from 0 to 2. Total score is 0 to 8.
+- Harm risk: none/low (0), moderate (1), high/credible threat (2)
+- Intent: accidental (0), negligent (1), deliberate (2)
+- Frequency: first time (0), repeated (1), ongoing/pattern (2)
+- Evidence strength: weak (0), moderate (1), strong/verified (2)
+
+Severity Mapping
+- 0-2: Warning (no suspension)
+- 3-5: Temporary suspension (24-72 hours)
+- 6-7: Extended suspension (7-30 days)
+- 8: Permanent suspension or review hold
+
+Enforcement Actions
+1) Warning
+   - Inform user of policy breach and required corrective action.
+   - Record in user history.
+2) Temporary suspension
+   - Duration: 24-72 hours.
+   - Used for moderate severity or unclear intent with strong evidence.
+3) Extended suspension
+   - Duration: 7-30 days.
+   - Used for repeated violations or high-impact behavior.
+4) Permanent suspension
+   - Used for severe fraud, safety threats, or repeated high-severity behavior.
+   - Account remains blocked unless reinstated by admin review.
+
+Mandatory Escalation Rules
+- Any credible safety threat triggers immediate suspension and review.
+- Verified fraud or impersonation triggers extended or permanent suspension.
+- Multiple no-shows in a short period triggers at least temporary suspension.
+
+Evidence Guidelines
+- Strong evidence includes direct message logs, payment records, or verified identity proof.
+- Moderate evidence includes multiple consistent reports.
+- Weak evidence includes uncorroborated single reports.
+- When evidence is weak, apply temporary suspension with investigation.
+
+Appeals Process
+1) Users may submit an appeal with supporting details.
+2) Appeals are reviewed by an admin not involved in the original decision.
+3) Outcomes: uphold, reduce, or lift the suspension.
+4) Appeal decisions are logged in audit history.
+
+Data and Audit Trail
+Suspension actions store:
+- suspended, suspendedAt, suspensionCode, suspensionScore, suspensionLevel,
+  suspensionNote, suspensionRubric, adminId, createdAt.
+Audit records are written to user_suspensions.
+
+Reinstatement
+- Automatic if the suspension duration ends (if tracked).
+- Manual via admin action.
+- Reinstatement should include a short note for audit completeness.
+
+User Communication
+- Users are informed of the suspension code and high-level reason.
+- Sensitive evidence is not shared if it risks reporter safety.
+
+Periodic Review
+- Policy should be reviewed quarterly.
+- Rubric thresholds may be adjusted based on observed outcomes.

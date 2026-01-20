@@ -1,0 +1,187 @@
+MentorMe ML and Recommendation System Overview
+Version: 1.0
+Effective: 2026-01-20
+
+Summary
+The app uses a hybrid recommendation approach:
+1) Content-based matching (rule-based scoring).
+2) Collaborative filtering (matrix factorization) for learners.
+Learners (students/parents) see a hybrid list; tutors see content-based only.
+
+Key Collections (Firestore)
+- users: primary user profiles and features (role, subjects, grades, city, price, availability).
+- recommendations: content-based learner -> tutor output (one document per learner).
+- tutor_recommendations: content-based tutor -> learner output (one document per tutor).
+- mf_recommendations: MF model output for learners (one document per learner).
+
+Where Recommendations Are Built
+1) Client-side content-based recompute (Flutter)
+   File: lib/services/content_recommender.dart
+   - Triggered from HomeScreen before fetching recommendations.
+   - Recomputes for the current user only.
+   - Writes to recommendations/{learnerId} or tutor_recommendations/{tutorId}.
+
+2) Offline content-based recompute (Python)
+   File: lib/offline_recommender/offline_recommender.py
+   - Batch job over all users in Firestore.
+   - Writes to recommendations and tutor_recommendations.
+   - Uses same logic as the client, with extra debug logging.
+
+3) Offline MF model (Python, PyTorch)
+   Files: ml/prepare_mf_data.py, ml/training.py, ml/build_mf_recommendations.py
+   - Prepares interaction data, trains MF, generates top-k per learner.
+   - Pushes results to mf_recommendations.
+
+Data Features Used (Content-Based)
+User fields required for matching (from users collection):
+- role: "student", "parent", "tutor"
+- completedProfile: true
+- city
+- subjects (list)
+- gradeLevels (list)
+- hoursPerDay, daysPerWeek
+- preferredTutorGender (learner side)
+- sex (tutor side)
+- maxPricePerHour (learner)
+- minPricePerHour (tutor)
+- available (tutor must be true)
+
+Content-Based Scoring (Learner -> Tutor)
+Source: lib/services/content_recommender.dart
+Components averaged into final score (0..1):
+- Subject overlap: overlap_count / learner_subjects_count
+- Grade overlap: overlap_count / learner_grades_count
+- Price compatibility:
+  * If tutor_min <= learner_max -> 1.0
+  * If tutor_min > learner_max -> 1 - (tutor_min - learner_max) / learner_max
+- Hours/day capacity:
+  * If tutor >= learner -> 1.0
+  * Else tutor/learner
+- Days/week capacity: same logic as hours
+- Preferred gender match:
+  * No preference -> 1.0
+  * Otherwise exact match -> 1.0, else 0.0
+
+Filtering rules (content-based):
+- Only tutors with completedProfile == true and available == true.
+- Only learners with completedProfile == true.
+- City filter: learner and tutor must be in same city (if both present).
+- Skip if score <= 0.
+
+Content-Based Scoring (Tutor -> Learner)
+Same structure, from tutor perspective:
+- Subject overlap and grade overlap
+- Price compatibility (learner_max vs tutor_min)
+- Hours/day and days/week capacity (tutor capacity vs learner request)
+- City filter in place (same-city).
+
+Reasons/Explanations
+The content-based recommender writes "reasons" per match:
+- Sample: "Teaches your subject(s): ...", "Covers your grade levels: ..."
+- These are shown on the cards in the UI.
+
+Hybrid Recommendation Logic (Learner side)
+Source: lib/models/recommendations.dart
+If both scores exist: finalScore = 0.7 * MF + 0.3 * Content
+If only one exists: use that score.
+Learner list is sorted by finalScore descending.
+
+Where Hybrid Is Applied
+Source: lib/services/recommendation_service.dart
+HomeScreen loads:
+- recommendations/{learnerId} (content-based)
+- mf_recommendations/{learnerId} (MF-based)
+Then merges by tutorId and sorts by finalScore.
+
+Tutor Side Recommendations
+Tutors do not use MF.
+Source: lib/services/recommendation_service.dart
+Tutors load only tutor_recommendations/{tutorId}.
+
+Offline Matrix Factorization (MF) Details
+Data preparation:
+- Input: ml/data/mf_interactions_real.csv
+  Columns include: learnerId, tutorId, interaction_score, and other metadata.
+- Script: ml/prepare_mf_data.py
+  * Drops rows with missing IDs or non-positive scores.
+  * Maps learnerId and tutorId to integer indices.
+  * Outputs mf_ratings.csv and id maps (learner_id_map.json, tutor_id_map.json).
+
+Model training:
+File: ml/training.py
+- Model: standard MF (embeddings + biases)
+  * user_factors, item_factors, user_bias, item_bias, global_bias
+- Loss: MSELoss
+- Optimizer: Adam (lr=1e-2, weight_decay=1e-4)
+- Embedding size: n_factors = 32
+- Train/val split: 80/20
+- Early stopping: patience=5
+- Outputs:
+  * learner_factors.npy, tutor_factors.npy
+  * learner_bias.npy, tutor_bias.npy
+  * mf_metadata.json (n_learners, n_tutors, global_bias)
+
+Evaluation and Results
+- Offline evaluation is computed at the end of ml/training.py.
+- Metrics: MSE, RMSE, MAE on the same train/val split (80/20).
+- Evaluation happens in-code via evaluate(train_loader, "Train") and
+  evaluate(val_loader, "Val (Test)"), and prints to the console.
+- Latest run results (from console):
+  * Train: MSE=0.0303, RMSE=0.1740, MAE=0.1013
+  * Val:   MSE=3.1771, RMSE=1.7824, MAE=1.0244
+- What these numbers mean:
+  * MSE (Mean Squared Error) averages squared prediction errors; it penalizes
+    large mistakes more heavily.
+  * RMSE is the square root of MSE and is in the same units as the target score.
+  * MAE (Mean Absolute Error) is the average absolute error; easier to interpret
+    as "average miss" in the score scale.
+- Why these metrics:
+  * MF training predicts a continuous interaction score, so regression metrics
+    are appropriate and easy to track during training.
+  * MSE is the actual training loss used by the model.
+  * RMSE and MAE are more interpretable for human review.
+- Is higher or lower better?
+  * Lower is better for MSE, RMSE, and MAE.
+  * The large gap between Train and Val suggests overfitting or a distribution
+    shift in the validation data; it means the model fits the training data
+    well but generalizes poorly to the validation set.
+- Interview note: we evaluate offline with these regression metrics, and
+  production evaluation (CTR, conversion, retention) is planned but not
+  yet instrumented.
+
+MF Recommendation Generation
+File: ml/build_mf_recommendations.py
+- Computes full score matrix: U * V^T + biases + global_bias
+- For each learner: ranks ALL tutors (no city filter), takes top_k=20.
+- Outputs:
+  * mf_recommendations.csv (for inspection)
+  * Firestore collection mf_recommendations/{learnerId}
+    - items: list of {tutorId, score_mf, tutor metadata}
+
+Synthetic Interaction Data (for demo training)
+File: ml/generate_synthetic_interactions.py
+- Generates synthetic mf_interactions_real.csv from learners.csv and tutors.csv
+- Uses weighted signals: views, messages, requests, rating, recency
+- This is offline only and does not touch Firestore.
+
+Runtime Flow (App)
+1) User opens HomeScreen.
+2) ContentRecommender recomputes for current user and writes to Firestore.
+3) HomeScreen loads recommendations:
+   - Learners: hybrid list via RecommendationService
+   - Tutors: content-only list
+4) UI renders cards and explanations.
+
+Known Constraints and Tradeoffs
+- Content-based uses same-city constraint. This improves relevance but limits pool.
+- MF runs offline; it is not real-time. Fresh activity is not instantly reflected.
+- Hybrid weights favor MF (0.7) once MF is available, so cold-start users rely on content.
+- Tutor side does not use MF to avoid sparse tutor-side interaction data.
+
+How to Explain in an Interview (Short Script)
+We built a hybrid recommender. Content-based matching uses profile features
+subjects, grades, price, availability, and city to compute a normalized score.
+For learners, we also train an offline matrix factorization model on interaction
+signals and blend it with content scores (70/30). Content recs are recomputed
+on the client for freshness, while MF is computed offline and pushed to Firestore.
+Tutors only get content-based recommendations to avoid sparse interaction data.
