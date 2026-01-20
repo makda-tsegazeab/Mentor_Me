@@ -7,7 +7,7 @@ class RatingDialog extends StatefulWidget {
 
   const RatingDialog({
     super.key,
-    this.initialScore = 5,
+    this.initialScore = 0,
     this.initialComment,
     required this.onSubmit,
   });
@@ -24,7 +24,7 @@ class _RatingDialogState extends State<RatingDialog> {
   @override
   void initState() {
     super.initState();
-    _score = widget.initialScore.clamp(1, 5);
+    _score = widget.initialScore.clamp(0, 5);
     _commentController = TextEditingController(text: widget.initialComment);
   }
 
@@ -45,7 +45,7 @@ class _RatingDialogState extends State<RatingDialog> {
           onPressed: _submitting ? null : () => setState(() => _score = i + 1),
           icon: Icon(
             filled ? Icons.star_rounded : Icons.star_border_rounded,
-            color: filled ? cs.primary : cs.onSurfaceVariant,
+            color: filled ? const Color(0xFFFFC107) : cs.onSurfaceVariant,
             size: 28,
           ),
         );
@@ -89,9 +89,15 @@ class _RatingDialogState extends State<RatingDialog> {
               controller: _commentController,
               maxLength: 240,
               maxLines: 3,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'Optional feedback',
                 alignLabelWithHint: true,
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: cs.outlineVariant),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: cs.primary, width: 1.5),
+                ),
               ),
             ),
           ],
@@ -103,7 +109,7 @@ class _RatingDialogState extends State<RatingDialog> {
           child: const Text('Cancel'),
         ),
         FilledButton(
-          onPressed: _submitting ? null : _submit,
+          onPressed: _submitting || _score == 0 ? null : _submit,
           child: _submitting
               ? const SizedBox(
                   width: 18,

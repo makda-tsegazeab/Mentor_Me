@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import '../providers/auth_provider.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -60,8 +63,74 @@ class _SignupScreenState extends State<SignupScreen> {
         role: _role,
       );
       if (!mounted) return;
-      // Success snackbar removed per request
-      Navigator.pushReplacementNamed(context, '/login');
+      switch (_role) {
+        case 'student':
+          Navigator.pushReplacementNamed(context, '/student-info');
+          break;
+        case 'tutor':
+          Navigator.pushReplacementNamed(context, '/tutor-info');
+          break;
+        case 'parent':
+          Navigator.pushReplacementNamed(context, '/parent-info');
+          break;
+        default:
+          Navigator.pushReplacementNamed(context, '/student-info');
+      }
+    } catch (e) {
+      setState(() => _errorMessage = auth.error ?? e.toString());
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
+    }
+  }
+
+  Future<void> _signupWithGoogle() async {
+    setState(() {
+      _isLoading = true;
+      _errorMessage = null;
+    });
+
+    final auth = Provider.of<AuthProvider>(context, listen: false);
+    try {
+      final user = await auth.signInWithGoogle(
+        role: _role,
+        nameOverride: _nameController.text.trim(),
+      );
+      if (user == null) {
+        setState(() => _errorMessage = 'Sign-up canceled.');
+        return;
+      }
+
+      final userDoc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .get();
+
+      if (userDoc.data()?['suspended'] == true) {
+        await firebase_auth.FirebaseAuth.instance.signOut();
+        if (!mounted) return;
+        Navigator.pushReplacementNamed(context, '/suspended');
+        return;
+      }
+
+      final role =
+          (userDoc.data()?['role'] ?? _role).toString().trim().toLowerCase();
+      if (userDoc.exists && userDoc.data()?['completedProfile'] == true) {
+        Navigator.pushReplacementNamed(context, '/home');
+      } else {
+        switch (role) {
+          case 'student':
+            Navigator.pushReplacementNamed(context, '/student-info');
+            break;
+          case 'tutor':
+            Navigator.pushReplacementNamed(context, '/tutor-info');
+            break;
+          case 'parent':
+            Navigator.pushReplacementNamed(context, '/parent-info');
+            break;
+          default:
+            Navigator.pushReplacementNamed(context, '/student-info');
+        }
+      }
     } catch (e) {
       setState(() => _errorMessage = auth.error ?? e.toString());
     } finally {
@@ -328,16 +397,11 @@ class _SignupScreenState extends State<SignupScreen> {
                       SizedBox(
                         width: double.infinity,
                         child: OutlinedButton.icon(
-                          onPressed: _isLoading ? null : () {},
-                          icon: Image.network(
-                            'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg',
+                          onPressed: _isLoading ? null : _signupWithGoogle,
+                          icon: SvgPicture.asset(
+                            'assets/google_logo.svg',
                             height: 20,
                             width: 20,
-                            errorBuilder: (_, __, ___) => const Icon(
-                              Icons.g_mobiledata,
-                              color: Color(0xFF4285F4),
-                              size: 20,
-                            ),
                           ),
                           label: Padding(
                             padding: const EdgeInsets.symmetric(vertical: 2),

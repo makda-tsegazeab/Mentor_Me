@@ -8,7 +8,10 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import '../models/tutoring_request.dart';
 import '../providers/message_provider.dart';
 import '../providers/notification_provider.dart';
+import '../providers/rating_provider.dart';
 import '../widgets/ui/empty_state.dart' as ui;
+import '../widgets/rating_dialog.dart';
+import '../widgets/report_sheet.dart';
 
 class RelationshipsScreen extends StatefulWidget {
   final int initialTab;
@@ -141,11 +144,7 @@ class _RelationshipsScreenState extends State<RelationshipsScreen> {
                       padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
                       child: Row(
                         children: [
-                          IconButton(
-                            icon: const Icon(Icons.arrow_back_ios_new),
-                            color: isDark ? Colors.white : const Color(0xFF111418),
-                            onPressed: () => Navigator.pop(context),
-                          ),
+                          const SizedBox(width: 48),
                           Expanded(
                             child: Text(
                               'Relationships',
@@ -495,6 +494,55 @@ class _RelationshipsScreenState extends State<RelationshipsScreen> {
     );
   }
 
+  void _openReportForRelationship(Map<String, dynamic> data) {
+    final partnerId = _isTutor ? data['studentId'] : data['tutorId'];
+    if (partnerId == null || partnerId.toString().isEmpty) return;
+    final partnerName = _isTutor ? data['studentName'] : data['tutorName'];
+    final reportedRole = _isTutor ? 'student' : 'tutor';
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => ReportSheet(
+        reportedUserId: partnerId.toString(),
+        reportedName: (partnerName ?? 'User').toString(),
+        contextType: 'relationship',
+        reporterRole: _userRole,
+        reportedRole: reportedRole,
+        relationshipId: data['id']?.toString(),
+      ),
+    );
+  }
+
+  Future<void> _openRatingForRelationship(Map<String, dynamic> data) async {
+    if (!_isLearner || _userId == null) return;
+    final partnerId = data['tutorId']?.toString();
+    if (partnerId == null || partnerId.isEmpty) return;
+    final ratingProvider = Provider.of<RatingProvider>(context, listen: false);
+    final myRating =
+        await ratingProvider.getMyRating(partnerId, _userId!).first;
+    final initialScore = (myRating?['score'] ?? 0) as int;
+    final initialComment = myRating?['comment'] as String?;
+    if (!mounted) return;
+    showDialog(
+      context: context,
+      builder: (_) => RatingDialog(
+        initialScore: initialScore,
+        initialComment: initialComment,
+        onSubmit: (score, comment) async {
+          await ratingProvider.submitRating(
+            tutorId: partnerId,
+            raterId: _userId!,
+            score: score,
+            comment: comment,
+            raterRole: _userRole,
+            relationshipId: data['id']?.toString(),
+          );
+        },
+      ),
+    );
+  }
+
   Widget _buildRelationshipCard(Map<String, dynamic> data) {
     final theme = Theme.of(context);
     final partnerName = _isTutor ? data['studentName'] : data['tutorName'];
@@ -510,6 +558,8 @@ class _RelationshipsScreenState extends State<RelationshipsScreen> {
         '${status[0].toUpperCase()}${status.substring(1)}';
     final endedLabel =
         endedAt != null ? DateFormat.yMMMd().format(endedAt.toDate()) : null;
+    final canRate = _isLearner && relationshipId != null;
+    final canEnd = relationshipId != null && status != 'ended';
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 12),
@@ -523,9 +573,28 @@ class _RelationshipsScreenState extends State<RelationshipsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              partnerName ?? 'Learner',
-              style: _lexend(fontSize: 16, fontWeight: FontWeight.w700),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    partnerName ?? 'Learner',
+                    style: _lexend(fontSize: 16, fontWeight: FontWeight.w700),
+                  ),
+                ),
+                PopupMenuButton<String>(
+                  onSelected: (value) {
+                    if (value == 'report') {
+                      _openReportForRelationship(data);
+                    }
+                  },
+                  itemBuilder: (context) => const [
+                    PopupMenuItem(
+                      value: 'report',
+                      child: Text('Report user'),
+                    ),
+                  ],
+                ),
+              ],
             ),
             const SizedBox(height: 4),
             Text(
@@ -562,57 +631,77 @@ class _RelationshipsScreenState extends State<RelationshipsScreen> {
               ),
             ],
             const SizedBox(height: 12),
-            if (relationshipId != null && status != 'ended')
+            if (canRate || canEnd)
               Align(
                 alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () async {
-                    final confirm = await showDialog<bool>(
-                      context: context,
-                      builder: (ctx) => AlertDialog(
-                        title: const Text('End tutoring relationship?'),
-                        content: const Text(
-                            'Are you sure you want to stop this tutoring relationship?'),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.pop(ctx, false),
-                            child: const Text('No'),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (canRate)
+                      TextButton(
+                        onPressed: () => _openRatingForRelationship(data),
+                        child: Text(
+                          'Rate Tutor',
+                          style: _lexend(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: theme.colorScheme.primary,
                           ),
-                          TextButton(
-                            onPressed: () => Navigator.pop(ctx, true),
-                            child: const Text('Yes, end'),
-                          ),
-                        ],
+                        ),
                       ),
-                    );
-                    if (confirm == true) {
-                      try {
-                        await Provider.of<MessageProvider>(context,
-                                listen: false)
-                            .updateRelationshipStatus(
-                          relationshipId: relationshipId,
-                          status: 'ended',
-                          endedAt: Timestamp.now(),
-                        );
-                      } catch (e) {
-                        if (mounted) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Failed to end relationship: $e'),
+                    if (canRate && canEnd) const SizedBox(width: 8),
+                    if (canEnd)
+                      TextButton(
+                        onPressed: () async {
+                          final confirm = await showDialog<bool>(
+                            context: context,
+                            builder: (ctx) => AlertDialog(
+                              title: const Text('End tutoring relationship?'),
+                              content: const Text(
+                                  'Are you sure you want to stop this tutoring relationship?'),
+                              actions: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(ctx, false),
+                                  child: const Text('No'),
+                                ),
+                                TextButton(
+                                  onPressed: () => Navigator.pop(ctx, true),
+                                  child: const Text('Yes, end'),
+                                ),
+                              ],
                             ),
                           );
-                        }
-                      }
-                    }
-                  },
-                  child: Text(
-                    'End Relationship',
-                    style: _lexend(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.red.shade600,
-                    ),
-                  ),
+                          if (confirm == true) {
+                            try {
+                              await Provider.of<MessageProvider>(context,
+                                      listen: false)
+                                  .updateRelationshipStatus(
+                                relationshipId: relationshipId,
+                                status: 'ended',
+                                endedAt: Timestamp.now(),
+                              );
+                            } catch (e) {
+                              if (mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content:
+                                        Text('Failed to end relationship: $e'),
+                                  ),
+                                );
+                              }
+                            }
+                          }
+                        },
+                        child: Text(
+                          'End Relationship',
+                          style: _lexend(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.red.shade600,
+                          ),
+                        ),
+                      ),
+                  ],
                 ),
               ),
           ],

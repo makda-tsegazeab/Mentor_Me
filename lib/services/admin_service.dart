@@ -4,6 +4,8 @@ class AdminService {
   static final _users = FirebaseFirestore.instance.collection('users');
   static final _verifications =
       FirebaseFirestore.instance.collection('user_verifications');
+  static final _suspensions =
+      FirebaseFirestore.instance.collection('user_suspensions');
 
   static Future<void> updateVerification({
     required String userId,
@@ -27,6 +29,28 @@ class AdminService {
     await batch.commit();
   }
 
+  static Future<void> updateSuspension({
+    required String userId,
+    required String adminId,
+    required bool suspended,
+    String? note,
+  }) async {
+    final batch = FirebaseFirestore.instance.batch();
+    final userRef = _users.doc(userId);
+    batch.set(userRef, {'suspended': suspended}, SetOptions(merge: true));
+
+    final auditRef = _suspensions.doc();
+    batch.set(auditRef, {
+      'userId': userId,
+      'adminId': adminId,
+      'suspended': suspended,
+      'note': note ?? '',
+      'createdAt': FieldValue.serverTimestamp(),
+    });
+
+    await batch.commit();
+  }
+
   static Stream<List<QueryDocumentSnapshot>> watchUsers() {
     return _users
         .orderBy('createdAt', descending: true)
@@ -37,6 +61,15 @@ class AdminService {
   static Stream<List<QueryDocumentSnapshot>> watchVerificationHistory(
       String userId) {
     return _verifications
+        .where('userId', isEqualTo: userId)
+        .orderBy('createdAt', descending: true)
+        .snapshots()
+        .map((snapshot) => snapshot.docs);
+  }
+
+  static Stream<List<QueryDocumentSnapshot>> watchSuspensionHistory(
+      String userId) {
+    return _suspensions
         .where('userId', isEqualTo: userId)
         .orderBy('createdAt', descending: true)
         .snapshots()

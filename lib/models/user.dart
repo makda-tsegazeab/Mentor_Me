@@ -59,10 +59,9 @@ class User {
     this.ratingCount,
   });
 
-  factory User.fromFirestore(DocumentSnapshot doc) {
-    final data = doc.data() as Map<String, dynamic>;
+  factory User.fromMap(String id, Map<String, dynamic> data) {
     return User(
-      id: doc.id,
+      id: id,
       email: data['email'] ?? '',
       name: data['name'] ?? '',
       role: data['role'] ?? 'student',
@@ -98,6 +97,11 @@ class User {
           data['rating'] != null ? (data['rating'] as num).toDouble() : null,
       ratingCount: data['ratingCount'],
     );
+  }
+
+  factory User.fromFirestore(DocumentSnapshot doc) {
+    final data = doc.data() as Map<String, dynamic>;
+    return User.fromMap(doc.id, data);
   }
 
   Map<String, dynamic> toJson() => {

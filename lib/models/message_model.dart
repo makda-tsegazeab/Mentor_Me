@@ -23,9 +23,7 @@ class Message {
     required this.participants,
   });
 
-  factory Message.fromFirestore(DocumentSnapshot doc) {
-    final data = doc.data() as Map<String, dynamic>;
-
+  factory Message.fromMap(String id, Map<String, dynamic> data) {
     // Safe timestamp handling
     DateTime timestamp;
     try {
@@ -47,7 +45,7 @@ class Message {
     }
 
     return Message(
-      id: doc.id,
+      id: id,
       senderId: data['senderId']?.toString() ?? '',
       receiverId: data['receiverId']?.toString() ?? '',
       senderName: data['senderName']?.toString() ?? 'Unknown',
@@ -57,6 +55,11 @@ class Message {
       isRead: data['isRead'] ?? false,
       participants: participants,
     );
+  }
+
+  factory Message.fromFirestore(DocumentSnapshot doc) {
+    final data = doc.data() as Map<String, dynamic>;
+    return Message.fromMap(doc.id, data);
   }
 
   Map<String, dynamic> toMap() {

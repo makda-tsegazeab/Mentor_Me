@@ -12,6 +12,7 @@ import '../utils/security_utils.dart';
 import '../widgets/tutoring_request_dialog.dart';
 import '../widgets/ui/empty_state.dart';
 import '../services/interaction_logger.dart';
+import '../widgets/report_sheet.dart';
 
 class ChatScreen extends StatefulWidget {
   final String receiverId;
@@ -107,11 +108,22 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void _openRating() async {
     if (_currentUser == null) return;
+    final canRate = await _hasTutoringRelationship();
+    if (!canRate) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+              content:
+                  Text('You can only rate tutors you have worked with.')),
+        );
+      }
+      return;
+    }
     final ratingProvider = Provider.of<RatingProvider>(context, listen: false);
     final myRating = await ratingProvider
         .getMyRating(widget.receiverId, _currentUser!.uid)
         .first;
-    final initialScore = (myRating?['score'] ?? 5) as int;
+    final initialScore = (myRating?['score'] ?? 0) as int;
     final initialComment = myRating?['comment'] as String?;
     if (!mounted) return;
     showDialog(
@@ -463,6 +475,89 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
+  void _openReportSheet() {
+    if (_currentUser == null) return;
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => ReportSheet(
+        reportedUserId: widget.receiverId,
+        reportedName: widget.receiverName,
+        contextType: 'chat',
+        reporterRole: _userRole,
+        reportedRole: _receiverRole,
+      ),
+    );
+  }
+
+  Future<bool> _hasTutoringRelationship() async {
+    if (_currentUser == null || !_isStudentOrParent) return false;
+    try {
+      final snapshot = await FirebaseFirestore.instance
+          .collection('tutoringRelationships')
+          .where('tutorId', isEqualTo: widget.receiverId)
+          .where('studentId', isEqualTo: _currentUser!.uid)
+          .limit(1)
+          .get();
+      return snapshot.docs.isNotEmpty;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  void _showChatActions() {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: isDark ? const Color(0xFF101922) : Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (_) {
+        return SafeArea(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ListTile(
+                leading: const Icon(Icons.person_outline),
+                title: const Text('View profile'),
+                onTap: () {
+                  Navigator.pop(context);
+                  _handleProfileTap();
+                },
+              ),
+              FutureBuilder<bool>(
+                future: _hasTutoringRelationship(),
+                builder: (context, snapshot) {
+                  final canRate = snapshot.data == true;
+                  if (!canRate) return const SizedBox.shrink();
+                  return ListTile(
+                    leading: const Icon(Icons.star_outline),
+                    title: const Text('Rate tutor'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      _openRating();
+                    },
+                  );
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.report_outlined, color: Colors.red),
+                title: const Text('Report user'),
+                onTap: () {
+                  Navigator.pop(context);
+                  _openReportSheet();
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   Widget _infoTile(String title, String value, bool isDark) {
     return Expanded(
       child: Column(
@@ -741,7 +836,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     IconButton(
                       icon: const Icon(Icons.more_vert),
                       color: isDark ? Colors.grey.shade300 : Colors.grey[700],
-                      onPressed: () {},
+                      onPressed: _showChatActions,
                     ),
                   ],
                 ),
@@ -971,42 +1066,21 @@ class _ChatScreenState extends State<ChatScreen> {
                   children: [
                     if (_isStudentOrParent && _receiverIsTutor)
                       Expanded(
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: OutlinedButton.icon(
-                                onPressed: _openRating,
-                                style: OutlinedButton.styleFrom(
-                                  minimumSize: const Size.fromHeight(48),
-                                  side: BorderSide(
-                                      color: primary.withOpacity(0.2)),
-                                  backgroundColor:
-                                      primary.withOpacity(isDark ? 0.3 : 0.2),
-                                  foregroundColor: primary,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                ),
-                                icon: const Icon(Icons.star),
-                                label: const Text('Rate User'),
-                              ),
+                        child: ElevatedButton.icon(
+                          onPressed: _sendTutoringRequest,
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: const Size.fromHeight(48),
+                            backgroundColor: primary,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
                             ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: ElevatedButton.icon(
-                                onPressed: _sendTutoringRequest,
-                                style: ElevatedButton.styleFrom(
-                                  minimumSize: const Size.fromHeight(48),
-                                  backgroundColor: primary,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                ),
-                                icon: const Icon(Icons.school),
-                                label: const Text('Request Tutoring'),
-                              ),
-                            ),
-                          ],
+                          ),
+                          icon: const Icon(Icons.school),
+                          label: const Text(
+                            'Request Tutoring',
+                            style: TextStyle(fontWeight: FontWeight.w600),
+                          ),
                         ),
                       ),
                   ],

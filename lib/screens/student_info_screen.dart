@@ -11,7 +11,9 @@ import '../providers/notification_provider.dart';
 import 'package:http/http.dart' as http;
 
 class StudentInfoScreen extends StatefulWidget {
-  const StudentInfoScreen({super.key});
+  final bool isEdit;
+
+  const StudentInfoScreen({super.key, this.isEdit = false});
 
   @override
   State<StudentInfoScreen> createState() => _StudentInfoScreenState();
@@ -135,6 +137,12 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
     super.dispose();
   }
 
+  String? _normalizeGradeGroup(String? value) {
+    if (value == null) return null;
+    final normalized = value.replaceAll('–', '-').replaceAll('—', '-');
+    return gradeGroups.contains(normalized) ? normalized : null;
+  }
+
   Future<void> _loadUserData() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
@@ -163,7 +171,8 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
       if (gradeLevels is List &&
           gradeLevels.isNotEmpty &&
           gradeLevels.first is String) {
-        _selectedGradeGroup = gradeLevels.first as String;
+        _selectedGradeGroup =
+            _normalizeGradeGroup(gradeLevels.first as String);
       }
 
       final prefGender = data['preferredTutorGender'];
@@ -354,25 +363,35 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
     Widget? prefix,
     Widget? suffix,
   }) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final fillColor =
+        isDark ? theme.colorScheme.surfaceVariant : Colors.white;
+    final borderColor =
+        isDark ? theme.colorScheme.outline : const Color(0xFFD1D1D1);
+    final hintColor = isDark
+        ? theme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+
     return InputDecoration(
       hintText: hint,
       hintStyle: GoogleFonts.lexend(
-        color: const Color(0xFF617589),
+        color: hintColor,
         fontSize: 14,
         fontWeight: FontWeight.w500,
       ),
       filled: true,
-      fillColor: Colors.white,
+      fillColor: fillColor,
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       prefixIcon: prefix,
       suffixIcon: suffix,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: Color(0xFFD1D1D1)),
+        borderSide: BorderSide(color: borderColor),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: Color(0xFFD1D1D1)),
+        borderSide: BorderSide(color: borderColor),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
@@ -381,25 +400,65 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
     );
   }
 
+  Color get mutedSurface {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    return isDark ? theme.colorScheme.surfaceVariant : Colors.grey.shade100;
+  }
+
+  Color get mutedText {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    return isDark
+        ? theme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+  }
+
+  Color get textColor {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    return isDark ? theme.colorScheme.onSurface : const Color(0xFF111418);
+  }
+
   @override
   Widget build(BuildContext context) {
-    final textTheme = GoogleFonts.lexendTextTheme(Theme.of(context).textTheme);
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final surfaceColor =
+        isDark ? theme.colorScheme.surface : Colors.white;
+    final appBarBg = theme.scaffoldBackgroundColor;
+    final appBarFg = theme.colorScheme.onBackground;
+    final mutedSurface =
+        isDark ? theme.colorScheme.surfaceVariant : Colors.grey.shade100;
+    final textColor =
+        isDark ? theme.colorScheme.onSurface : const Color(0xFF111418);
+    final mutedText = isDark
+        ? theme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+    final dividerColor =
+        isDark ? theme.colorScheme.surfaceVariant : const Color(0xFFF6F7F8);
+    final textTheme = GoogleFonts.lexendTextTheme(theme.textTheme);
     final double hoursVal =
         ((double.tryParse(_selectedHours ?? '2') ?? 2).clamp(1, 4)).toDouble();
     final double daysVal =
         ((double.tryParse(_selectedDays ?? '3') ?? 3).clamp(1, 7)).toDouble();
+    final avatarBorderColor = surfaceColor;
+    final avatarBg =
+        isDark ? theme.colorScheme.surfaceVariant : Colors.grey.shade200;
+    final avatarShadow =
+        isDark ? Colors.black.withOpacity(0.2) : Colors.black.withOpacity(0.05);
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: theme.scaffoldBackgroundColor,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
+        backgroundColor: appBarBg,
+        foregroundColor: appBarFg,
         elevation: 0.5,
         title: Text(
-          'Create Learner Profile',
+          widget.isEdit ? 'Edit Profile' : 'Create Your Profile',
           style: GoogleFonts.lexend(
             fontWeight: FontWeight.bold,
-            color: const Color(0xFF111418),
+            color: appBarFg,
             fontSize: 16,
           ),
         ),
@@ -425,7 +484,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: surfaceColor,
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Column(
@@ -439,15 +498,15 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   border:
-                                      Border.all(color: Colors.white, width: 4),
+                                      Border.all(color: avatarBorderColor, width: 4),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.05),
+                                      color: avatarShadow,
                                       blurRadius: 8,
                                       offset: const Offset(0, 2),
                                     ),
                                   ],
-                                  color: Colors.grey.shade200,
+                                  color: avatarBg,
                                   image: _selectedImage != null
                                       ? DecorationImage(
                                           fit: BoxFit.cover,
@@ -472,7 +531,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                                       color: const Color(0xFF2B8CEE),
                                       shape: BoxShape.circle,
                                       border: Border.all(
-                                          color: Colors.white, width: 3),
+                                          color: avatarBorderColor, width: 3),
                                     ),
                                     child: const Icon(Icons.edit,
                                         size: 18, color: Colors.white),
@@ -492,14 +551,14 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                             style: GoogleFonts.lexend(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
-                              color: const Color(0xFF111418),
+                              color: textColor,
                             ),
                           ),
                           const SizedBox(height: 4),
                           Text(
                             'Must be a clear headshot.',
                             style: GoogleFonts.lexend(
-                              color: const Color(0xFF617589),
+                              color: mutedText,
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
                             ),
@@ -510,7 +569,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                Container(height: 12, color: Color(0xFFF6F7F8)),
+                Container(height: 12, color: dividerColor),
                 const SizedBox(height: 12),
                 _section(
                   title: 'Personal Information',
@@ -521,7 +580,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                         'Full Name',
                         style: GoogleFonts.lexend(
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF111418),
+                          color: textColor,
                           fontSize: 14,
                         ),
                       ),
@@ -529,7 +588,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                       TextFormField(
                         controller: _nameController,
                         style: GoogleFonts.lexend(
-                          color: const Color(0xFF111418),
+                          color: textColor,
                           fontSize: 14,
                         ),
                         decoration: _input(hint: 'Enter your full name'),
@@ -548,7 +607,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                                   'Age',
                                   style: GoogleFonts.lexend(
                                     fontWeight: FontWeight.w600,
-                                    color: const Color(0xFF111418),
+                                    color: textColor,
                                     fontSize: 14,
                                   ),
                                 ),
@@ -556,7 +615,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                                 TextFormField(
                                   controller: _ageController,
                                   style: GoogleFonts.lexend(
-                                    color: const Color(0xFF111418),
+                                    color: textColor,
                                     fontSize: 14,
                                   ),
                                   keyboardType: TextInputType.number,
@@ -576,7 +635,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                                   'City',
                                   style: GoogleFonts.lexend(
                                     fontWeight: FontWeight.w600,
-                                    color: const Color(0xFF111418),
+                                    color: textColor,
                                     fontSize: 14,
                                   ),
                                 ),
@@ -592,7 +651,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                         'Sex',
                         style: GoogleFonts.lexend(
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF111418),
+                          color: textColor,
                           fontSize: 14,
                         ),
                       ),
@@ -609,7 +668,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                               style: GoogleFonts.lexend(
                                 color: selected
                                     ? const Color(0xFF2B8CEE)
-                                    : const Color(0xFF617589),
+                                    : mutedText,
                                 fontWeight: selected
                                     ? FontWeight.w700
                                     : FontWeight.w500,
@@ -623,7 +682,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                             }),
                             selectedColor:
                                 const Color(0xFF2B8CEE).withOpacity(0.2),
-                            backgroundColor: Colors.grey.shade100,
+                            backgroundColor: mutedSurface,
                             side: BorderSide.none,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12)),
@@ -644,7 +703,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                     ],
                   ),
                 ),
-                Container(height: 12, color: Color(0xFFF6F7F8)),
+                Container(height: 12, color: dividerColor),
                 const SizedBox(height: 12),
                 _section(
                   title: 'Academic Needs',
@@ -655,7 +714,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                         'Grade Level',
                         style: GoogleFonts.lexend(
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF111418),
+                          color: textColor,
                           fontSize: 14,
                         ),
                       ),
@@ -669,7 +728,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                         child: DropdownButtonFormField<String>(
                           value: _selectedGradeGroup,
                           style: GoogleFonts.lexend(
-                            color: const Color(0xFF111418),
+                            color: textColor,
                             fontSize: 14,
                           ),
                           decoration:
@@ -713,7 +772,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                         'Subjects you need help with',
                         style: GoogleFonts.lexend(
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF111418),
+                          color: textColor,
                           fontSize: 14,
                         ),
                       ),
@@ -741,7 +800,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                     ],
                   ),
                 ),
-                Container(height: 12, color: Color(0xFFF6F7F8)),
+                Container(height: 12, color: dividerColor),
                 const SizedBox(height: 12),
                 _section(
                   title: 'Tutoring Preferences',
@@ -752,7 +811,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                         'Preferred Tutor Gender',
                         style: GoogleFonts.lexend(
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF111418),
+                          color: textColor,
                           fontSize: 14,
                         ),
                       ),
@@ -769,7 +828,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                               style: GoogleFonts.lexend(
                                 color: selected
                                     ? const Color(0xFF2B8CEE)
-                                    : const Color(0xFF617589),
+                                    : mutedText,
                                 fontWeight: selected
                                     ? FontWeight.w700
                                     : FontWeight.w500,
@@ -781,7 +840,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                                 setState(() => _preferredTutorGender = opt),
                             selectedColor:
                                 const Color(0xFF2B8CEE).withOpacity(0.2),
-                            backgroundColor: Colors.grey.shade100,
+                            backgroundColor: mutedSurface,
                             side: BorderSide.none,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12)),
@@ -831,7 +890,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                         'Max Price Per Hour',
                         style: GoogleFonts.lexend(
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF111418),
+                          color: textColor,
                           fontSize: 14,
                         ),
                       ),
@@ -839,7 +898,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                       TextFormField(
                         controller: _maxPriceController,
                         style: GoogleFonts.lexend(
-                          color: const Color(0xFF111418),
+                          color: textColor,
                           fontSize: 14,
                         ),
                         keyboardType: TextInputType.number,
@@ -850,7 +909,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                             child: Text(
                               'Birr',
                               style: GoogleFonts.lexend(
-                                color: const Color(0xFF617589),
+                                color: mutedText,
                                 fontSize: 14,
                               ),
                             ),
@@ -860,7 +919,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                             child: Text(
                               '/hr',
                               style: GoogleFonts.lexend(
-                                color: const Color(0xFF617589),
+                                color: mutedText,
                                 fontSize: 14,
                               ),
                             ),
@@ -871,34 +930,46 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
+                Container(
                   width: double.infinity,
-                  height: 48,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2B8CEE),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
-                    ),
-                    onPressed: _isUploading ? null : _saveProfile,
-                    child: Text(
-                      'Save and Continue',
-                      style: GoogleFonts.lexend(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 16,
-                      ),
-                    ),
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: surfaceColor,
+                    borderRadius: BorderRadius.circular(12),
                   ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  'By continuing, you agree to our Terms of Service and Privacy Policy.',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.lexend(
-                    color: const Color(0xFF617589),
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        width: double.infinity,
+                        height: 48,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF2B8CEE),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                          ),
+                          onPressed: _isUploading ? null : _saveProfile,
+                          child: Text(
+                            'Save and Continue',
+                            style: GoogleFonts.lexend(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        'By continuing, you agree to our Terms of Service and Privacy Policy.',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.lexend(
+                          color: mutedText,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -909,13 +980,19 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
     );
   }
 
-  Widget _section({required String title, required Widget child}) {
+Widget _section({required String title, required Widget child}) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final sectionBg = isDark ? theme.colorScheme.surface : Colors.white;
+    final sectionText =
+        isDark ? theme.colorScheme.onSurface : const Color(0xFF111418);
+
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: sectionBg,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -926,7 +1003,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
             style: GoogleFonts.lexend(
               fontSize: 16,
               fontWeight: FontWeight.w700,
-              color: const Color(0xFF111418),
+              color: sectionText,
             ),
           ),
           const SizedBox(height: 12),
@@ -981,14 +1058,14 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
           onTap: _showSubjectPicker,
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.grey.shade100,
+              color: mutedSurface,
               borderRadius: BorderRadius.circular(12),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             child: Text(
               '+ Add subject',
               style: GoogleFonts.lexend(
-                color: const Color(0xFF617589),
+                color: mutedText,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
               ),
@@ -1048,7 +1125,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
               label,
               style: GoogleFonts.lexend(
                 fontWeight: FontWeight.w600,
-                color: const Color(0xFF111418),
+                color: textColor,
                 fontSize: 14,
               ),
             ),
@@ -1090,7 +1167,7 @@ class _StudentInfoScreenState extends State<StudentInfoScreen> {
           controller: controller,
           focusNode: focusNode,
           style: GoogleFonts.lexend(
-            color: const Color(0xFF111418),
+            color: textColor,
             fontSize: 14,
           ),
           decoration: _input(hint: 'Enter your city'),

@@ -11,7 +11,9 @@ import 'package:provider/provider.dart';
 import '../providers/notification_provider.dart';
 
 class TutorInfoScreen extends StatefulWidget {
-  const TutorInfoScreen({super.key});
+  final bool isEdit;
+
+  const TutorInfoScreen({super.key, this.isEdit = false});
 
   @override
   State<TutorInfoScreen> createState() => _TutorInfoScreenState();
@@ -383,23 +385,31 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
     Widget? prefix,
     Widget? suffix,
   }) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final fillColor =
+        isDark ? theme.colorScheme.surfaceVariant : Colors.white;
+    final borderColor =
+        isDark ? theme.colorScheme.outline : const Color(0xFFD1D1D1);
+    final hintColor = isDark
+        ? theme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+
     return InputDecoration(
       hintText: hint,
-      hintStyle: GoogleFonts.lexend(
-        color: const Color(0xFF617589),
-      ),
+      hintStyle: GoogleFonts.lexend(color: hintColor),
       prefixIcon: prefix,
       suffixIcon: suffix,
       filled: true,
-      fillColor: Colors.white,
+      fillColor: fillColor,
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: Color(0xFFD1D1D1)),
+        borderSide: BorderSide(color: borderColor),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: Color(0xFFD1D1D1)),
+        borderSide: BorderSide(color: borderColor),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
@@ -428,10 +438,24 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
   }
 
   Widget _profileHeader() {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final surfaceColor =
+        isDark ? theme.colorScheme.surface : Colors.white;
+    final textColor =
+        isDark ? theme.colorScheme.onSurface : const Color(0xFF111418);
+    final subtitleColor = isDark
+        ? theme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+    final imageBg =
+        isDark ? theme.colorScheme.surfaceVariant : Colors.grey.shade200;
+    final shadowColor =
+        isDark ? Colors.black.withOpacity(0.2) : Colors.black.withOpacity(0.06);
+
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: surfaceColor,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -444,14 +468,14 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                 width: 128,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.grey.shade200,
+                  color: imageBg,
                   image: _profileImage != null
                       ? DecorationImage(
                           image: FileImage(_profileImage!), fit: BoxFit.cover)
                       : null,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.06),
+                      color: shadowColor,
                       blurRadius: 10,
                       offset: const Offset(0, 4),
                     )
@@ -489,18 +513,18 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
             ],
           ),
           const SizedBox(height: 12),
-          const Text(
+          Text(
             'Upload Profile Picture',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w700,
-              color: Color(0xFF111418),
+              color: textColor,
             ),
           ),
           const SizedBox(height: 4),
-          const Text(
+          Text(
             'Must be a clear headshot.',
-            style: TextStyle(color: Color(0xFF617589)),
+            style: TextStyle(color: subtitleColor),
           ),
         ],
       ),
@@ -508,10 +532,17 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
   }
 
   Widget _sectionCard(String title, Widget child, {Widget? badge}) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final surfaceColor =
+        isDark ? theme.colorScheme.surface : Colors.white;
+    final textColor =
+        isDark ? theme.colorScheme.onSurface : const Color(0xFF111418);
+
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: surfaceColor,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -522,10 +553,10 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
               Expanded(
                 child: Text(
                   title,
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xFF111418)),
+                      color: textColor),
                 ),
               ),
               if (badge != null) badge,
@@ -579,10 +610,16 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
           label: Text(
             actionLabel,
             style: TextStyle(
-                color: Color(0xFF617589), fontWeight: FontWeight.w600),
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Theme.of(context).colorScheme.onSurfaceVariant
+                  : const Color(0xFF617589),
+              fontWeight: FontWeight.w600,
+            ),
           ),
           onPressed: onAdd,
-          backgroundColor: Colors.grey.shade100,
+          backgroundColor: Theme.of(context).brightness == Brightness.dark
+              ? Theme.of(context).colorScheme.surfaceVariant
+              : Colors.grey.shade100,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
             side: BorderSide.none,
@@ -609,6 +646,27 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
   @override
   Widget build(BuildContext context) {
     final baseTheme = Theme.of(context);
+    final isDark = baseTheme.brightness == Brightness.dark;
+    final scaffoldBg = isDark
+        ? baseTheme.scaffoldBackgroundColor
+        : const Color(0xFFF6F7F8);
+    final appBarBg =
+        isDark ? baseTheme.colorScheme.surface : Colors.white;
+    final appBarFg = baseTheme.colorScheme.onSurface;
+    final hintColor = isDark
+        ? baseTheme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+    final titleColor =
+        isDark ? baseTheme.colorScheme.onSurface : const Color(0xFF111418);
+    final contentText =
+        isDark ? baseTheme.colorScheme.onSurface : const Color(0xFF111418);
+    final mutedText = isDark
+        ? baseTheme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+    final contentSurface =
+        isDark ? baseTheme.colorScheme.surfaceVariant : Colors.white;
+    final footerBg =
+        isDark ? baseTheme.colorScheme.surface : Colors.white;
 
     final lexendText = GoogleFonts.lexendTextTheme(baseTheme.textTheme);
     final hoursVal =
@@ -618,7 +676,7 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
 
     return Theme(
       data: baseTheme.copyWith(
-        scaffoldBackgroundColor: const Color(0xFFF6F7F8),
+        scaffoldBackgroundColor: scaffoldBg,
         textTheme: lexendText,
         primaryTextTheme: GoogleFonts.lexendTextTheme(
           baseTheme.primaryTextTheme,
@@ -626,28 +684,28 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
         appBarTheme: baseTheme.appBarTheme.copyWith(
           titleTextStyle: GoogleFonts.lexend(
             fontWeight: FontWeight.w700,
-            color: const Color(0xFF111418),
+            color: titleColor,
             fontSize: 20,
           ),
           toolbarTextStyle: GoogleFonts.lexend(
               textStyle: baseTheme.appBarTheme.toolbarTextStyle),
         ),
         inputDecorationTheme: baseTheme.inputDecorationTheme.copyWith(
-          hintStyle: GoogleFonts.lexend(color: const Color(0xFF617589)),
+          hintStyle: GoogleFonts.lexend(color: hintColor),
         ),
       ),
       child: DefaultTextStyle.merge(
           style: GoogleFonts.lexend(),
           child: Scaffold(
             appBar: AppBar(
-              backgroundColor: Colors.white,
-              foregroundColor: const Color(0xFF111418),
+              backgroundColor: appBarBg,
+              foregroundColor: appBarFg,
               elevation: 0.5,
-              title: const Text(
-                'Edit Your Details',
+              title: Text(
+                widget.isEdit ? 'Edit Profile' : 'Create Your Profile',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF111418),
+                  color: titleColor,
                 ),
               ),
               centerTitle: false,
@@ -692,7 +750,7 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                                   child: DropdownButtonFormField<String>(
                                     value: _selectedSex,
                                     style: GoogleFonts.lexend(
-                                      color: const Color(0xFF111418),
+                                      color: contentText,
                                       fontSize: 14,
                                     ),
                                     decoration: _fieldDecoration(hint: 'Sex *'),
@@ -702,8 +760,7 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                                               child: Text(
                                                 s,
                                                 style: GoogleFonts.lexend(
-                                                  color:
-                                                      const Color(0xFF111418),
+                                                  color: contentText,
                                                 ),
                                               ),
                                             ))
@@ -744,17 +801,17 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
+                            Text(
                               'Subjects Taught*',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF111418)),
+                                  color: contentText),
                             ),
                             const SizedBox(height: 8),
                             Container(
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: contentSurface,
                                 borderRadius: BorderRadius.circular(12),
                                 border:
                                     Border.all(color: const Color(0xFFD1D1D1)),
@@ -782,17 +839,17 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                                 ),
                               ),
                             const SizedBox(height: 16),
-                            const Text(
+                            Text(
                               'Grade Levels*',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF111418)),
+                                  color: contentText),
                             ),
                             const SizedBox(height: 8),
                             Container(
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: contentSurface,
                                 borderRadius: BorderRadius.circular(12),
                                 border:
                                     Border.all(color: const Color(0xFFD1D1D1)),
@@ -820,56 +877,48 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                                 ),
                               ),
                             const SizedBox(height: 16),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(12),
-                                      border: Border.all(
-                                          color: const Color(0xFFD1D1D1)),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 16, vertical: 8),
-                                    child: _labeledSlider(
-                                      label: 'Hours per Day',
-                                      value: hoursVal,
-                                      min: 1,
-                                      max: 8,
-                                      display: '${hoursVal.round()} Hours',
-                                      onChanged: (v) => setState(() {
-                                        final val = v.round().toString();
-                                        _selectedHours = val;
-                                        _hoursController.text = val;
-                                      }),
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(width: 12),
-                                Expanded(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(12),
-                                      border: Border.all(
-                                          color: const Color(0xFFD1D1D1)),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 16, vertical: 8),
-                                    child: _labeledSlider(
-                                      label: 'Days per Week',
-                                      value: daysVal,
-                                      min: 1,
-                                      max: 7,
-                                      display: '${daysVal.round()} Days',
-                                      onChanged: (v) => setState(() {
-                                        final val = v.round().toString();
-                                        _selectedDays = val;
-                                        _daysController.text = val;
-                                      }),
-                                    ),
-                                  ),
-                                ),
-                              ],
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                border:
+                                    Border.all(color: const Color(0xFFD1D1D1)),
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
+                              child: _labeledSlider(
+                                label: 'Hours per Day',
+                                value: hoursVal,
+                                min: 1,
+                                max: 8,
+                                display: '${hoursVal.round()} Hours',
+                                onChanged: (v) => setState(() {
+                                  final val = v.round().toString();
+                                  _selectedHours = val;
+                                  _hoursController.text = val;
+                                }),
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                border:
+                                    Border.all(color: const Color(0xFFD1D1D1)),
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
+                              child: _labeledSlider(
+                                label: 'Days per Week',
+                                value: daysVal,
+                                min: 1,
+                                max: 7,
+                                display: '${daysVal.round()} Days',
+                                onChanged: (v) => setState(() {
+                                  final val = v.round().toString();
+                                  _selectedDays = val;
+                                  _daysController.text = val;
+                                }),
+                              ),
                             ),
                             const SizedBox(height: 16),
                             TextFormField(
@@ -889,11 +938,11 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                             const SizedBox(height: 12),
                             SwitchListTile(
                               contentPadding: EdgeInsets.zero,
-                              title: const Text(
+                              title: Text(
                                 'Available for new students',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xFF111418)),
+                                    color: contentText),
                               ),
                               value: _available,
                               activeColor: const Color(0xFF2B8CEE),
@@ -974,8 +1023,8 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                                       : '${_idExpiryDate!.year}-${_idExpiryDate!.month.toString().padLeft(2, '0')}-${_idExpiryDate!.day.toString().padLeft(2, '0')}',
                                   style: TextStyle(
                                     color: _idExpiryDate == null
-                                        ? const Color(0xFF617589)
-                                        : const Color(0xFF111418),
+                                        ? mutedText
+                                        : contentText,
                                   ),
                                 ),
                               ),
@@ -987,11 +1036,11 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                             _uploadButton(
                                 'Upload ID Back', _idBack, (f) => _idBack = f),
                             const SizedBox(height: 8),
-                            const Text(
+                            Text(
                               'Your documents are safe with us. We use them for verification purposes only.',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  color: Color(0xFF617589), fontSize: 12),
+                                  color: mutedText, fontSize: 12),
                             ),
                           ],
                         ),
@@ -1001,32 +1050,35 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
                 ),
               ),
             ),
-            bottomNavigationBar: Container(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 8,
-                    offset: Offset(0, -2),
-                  )
-                ],
-              ),
-              child: ElevatedButton(
-                onPressed: _isUploading ? null : _saveTutorProfile,
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size.fromHeight(52),
-                  backgroundColor: const Color(0xFF2B8CEE),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
+            bottomNavigationBar: SafeArea(
+              top: false,
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+                decoration: BoxDecoration(
+                  color: footerBg,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 8,
+                      offset: Offset(0, -2),
+                    )
+                  ],
                 ),
-                child: const Text(
-                  'Save Changes',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16),
+                child: ElevatedButton(
+                  onPressed: _isUploading ? null : _saveTutorProfile,
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size.fromHeight(52),
+                    backgroundColor: const Color(0xFF2B8CEE),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                  ),
+                  child: const Text(
+                    'Save Changes',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16),
+                  ),
                 ),
               ),
             ),
@@ -1036,6 +1088,7 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
 
   Widget _cityAutocomplete() {
     return Autocomplete<String>(
+      initialValue: TextEditingValue(text: _cityController.text),
       optionsBuilder: (text) {
         final query = text.text.toLowerCase();
         if (query.isEmpty) return const Iterable<String>.empty();
@@ -1044,16 +1097,11 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
         );
       },
       fieldViewBuilder: (context, controller, focusNode, onFieldSubmitted) {
-        controller.text = _cityController.text;
-        controller.selection = TextSelection.fromPosition(
-            TextPosition(offset: controller.text.length));
-        controller.addListener(() {
-          _cityController.text = controller.text;
-        });
         return TextFormField(
           controller: controller,
           focusNode: focusNode,
           decoration: _fieldDecoration(hint: 'City *'),
+          onChanged: (value) => _cityController.text = value,
           validator: (v) => v == null || v.isEmpty ? 'Please enter city' : null,
         );
       },
@@ -1123,6 +1171,11 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
     required String display,
     required ValueChanged<double> onChanged,
   }) {
+    final theme = Theme.of(context);
+    final textColor = theme.brightness == Brightness.dark
+        ? theme.colorScheme.onSurface
+        : const Color(0xFF111418);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1130,8 +1183,8 @@ class _TutorInfoScreenState extends State<TutorInfoScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(label,
-                style: const TextStyle(
-                    fontWeight: FontWeight.w600, color: Color(0xFF111418))),
+                style: TextStyle(
+                    fontWeight: FontWeight.w600, color: textColor)),
             Text(display,
                 style: const TextStyle(
                     fontWeight: FontWeight.w700, color: Color(0xFF2B8CEE))),
