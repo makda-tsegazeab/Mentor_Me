@@ -40,10 +40,20 @@ class AppTheme {
           const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
     ),
     scaffoldBackgroundColor: backgroundLight,
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(color: textLight),
+      bodyMedium: TextStyle(color: textLight),
+      bodySmall: TextStyle(color: textLight),
+      titleMedium: TextStyle(color: textLight),
+      titleLarge: TextStyle(color: textLight),
+    ),
     appBarTheme: const AppBarTheme(
       elevation: 0,
       surfaceTintColor: Colors.transparent,
       centerTitle: true,
+      backgroundColor: backgroundLight,
+      foregroundColor: textLight,
+      iconTheme: IconThemeData(color: textLight),
     ),
     cardTheme: CardThemeData(
       color: Colors.white,
@@ -100,6 +110,12 @@ class AppTheme {
       ),
       tileColor: Colors.white,
     ),
+    iconTheme: const IconThemeData(color: textLight),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: Colors.white,
+      selectedItemColor: primaryColor,
+      unselectedItemColor: Color(0xFF64748B),
+    ),
     dividerTheme: DividerThemeData(
       color: Colors.grey.shade200,
       thickness: 1,
@@ -131,6 +147,13 @@ class AppTheme {
       inversePrimary: primaryColor,
     ),
     scaffoldBackgroundColor: backgroundDark,
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(color: textDark),
+      bodyMedium: TextStyle(color: textDark),
+      bodySmall: TextStyle(color: Colors.white70),
+      titleMedium: TextStyle(color: textDark),
+      titleLarge: TextStyle(color: textDark),
+    ),
     dialogTheme: DialogThemeData(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       surfaceTintColor: Colors.transparent,
@@ -141,6 +164,9 @@ class AppTheme {
       elevation: 0,
       surfaceTintColor: Colors.transparent,
       centerTitle: true,
+      backgroundColor: backgroundDark,
+      foregroundColor: textDark,
+      iconTheme: IconThemeData(color: textDark),
     ),
     cardTheme: CardThemeData(
       color: const Color(0xFF1C2536),
@@ -195,6 +221,12 @@ class AppTheme {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
+    ),
+    iconTheme: const IconThemeData(color: textDark),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: Color(0xFF0F172A),
+      selectedItemColor: primaryColor,
+      unselectedItemColor: Colors.white70,
     ),
   );
 }

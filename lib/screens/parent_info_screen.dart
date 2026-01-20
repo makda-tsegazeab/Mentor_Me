@@ -11,7 +11,9 @@ import 'package:provider/provider.dart';
 import '../providers/notification_provider.dart';
 
 class ParentInfoScreen extends StatefulWidget {
-  const ParentInfoScreen({super.key});
+  final bool isEdit;
+
+  const ParentInfoScreen({super.key, this.isEdit = false});
 
   @override
   State<ParentInfoScreen> createState() => _ParentInfoScreenState();
@@ -23,23 +25,19 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
   final _cityController = TextEditingController();
   final _ageController = TextEditingController();
   final _maxPriceController = TextEditingController();
-  final _idNumberController = TextEditingController();
   final _hoursController = TextEditingController();
   final _daysController = TextEditingController();
 
   String? _selectedSex;
   String? _selectedHours;
   String? _selectedDays;
-  String? _selectedIdType;
-  DateTime? _idExpiryDate;
+  String _preferredTutorGender = 'No preference';
   bool _isUploading = false;
-  bool _verified = false;
 
   File? _profileImage;
-  File? _idFront;
-  File? _idBack;
 
   final List<String> sexOptions = ['Male', 'Female'];
+  final List<String> tutorGenderOptions = ['Male', 'Female', 'No preference'];
   final List<String> gradeLevels = ['KG', '1-4', '5-6', '7-8', '9-10', '11-12'];
   final List<String> subjects = [
     'Mathematics',
@@ -128,7 +126,6 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
     _cityController.dispose();
     _ageController.dispose();
     _maxPriceController.dispose();
-    _idNumberController.dispose();
     _hoursController.dispose();
     _daysController.dispose();
     super.dispose();
@@ -154,13 +151,11 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
       _selectedDays = (data['daysPerWeek'] ?? '3').toString();
       _hoursController.text = _selectedHours ?? '';
       _daysController.text = _selectedDays ?? '';
-      _maxPriceController.text = (data['maxPricePerHour'] ?? '').toString();
-      _selectedIdType = data['idType'];
-      _idNumberController.text = data['idNumber'] ?? '';
-      if (data['idExpiryDate'] != null) {
-        _idExpiryDate = DateTime.tryParse(data['idExpiryDate']);
+      final prefGender = data['preferredTutorGender'];
+      if (prefGender is String && prefGender.isNotEmpty) {
+        _preferredTutorGender = prefGender;
       }
-      _verified = data['verified'] == true;
+      _maxPriceController.text = (data['maxPricePerHour'] ?? '').toString();
     });
   }
 
@@ -198,17 +193,9 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
     if (user == null) return;
     try {
       String? profileUrl;
-      String? idFrontUrl;
-      String? idBackUrl;
       if (_profileImage != null) {
         profileUrl =
             await _uploadToCloudinary(_profileImage!, 'mentorme_profiles');
-      }
-      if (_idFront != null) {
-        idFrontUrl = await _uploadToCloudinary(_idFront!, 'mentorme_ids');
-      }
-      if (_idBack != null) {
-        idBackUrl = await _uploadToCloudinary(_idBack!, 'mentorme_ids');
       }
 
       final hoursText = _hoursController.text.trim().isNotEmpty
@@ -228,16 +215,11 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
         'gradeLevels': selectedGrades,
         'hoursPerDay': int.tryParse(hoursText),
         'daysPerWeek': int.tryParse(daysText),
+        'preferredTutorGender': _preferredTutorGender,
         'maxPricePerHour': double.tryParse(
                 _maxPriceController.text.trim().replaceAll(',', '')) ??
             0,
-        'idType': _selectedIdType,
-        'idNumber': _idNumberController.text.trim(),
-        'idExpiryDate': _idExpiryDate?.toIso8601String(),
         'profileImage': profileUrl,
-        'idFront': idFrontUrl,
-        'idBack': idBackUrl,
-        'verified': _verified,
         'completedProfile': true,
         'createdAt': FieldValue.serverTimestamp(),
       }, SetOptions(merge: true));
@@ -271,23 +253,31 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
     Widget? prefix,
     Widget? suffix,
   }) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final fillColor =
+        isDark ? theme.colorScheme.surfaceVariant : Colors.white;
+    final borderColor =
+        isDark ? theme.colorScheme.outline : const Color(0xFFD1D1D1);
+    final hintColor = isDark
+        ? theme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+
     return InputDecoration(
       hintText: hint,
-      hintStyle: GoogleFonts.lexend(
-        color: const Color(0xFF617589),
-      ),
+      hintStyle: GoogleFonts.lexend(color: hintColor),
       prefixIcon: prefix,
       suffixIcon: suffix,
       filled: true,
-      fillColor: Colors.white,
+      fillColor: fillColor,
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: Color(0xFFD1D1D1)),
+        borderSide: BorderSide(color: borderColor),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: Color(0xFFD1D1D1)),
+        borderSide: BorderSide(color: borderColor),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
@@ -297,10 +287,24 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
   }
 
   Widget _profileHeader() {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final surfaceColor =
+        isDark ? theme.colorScheme.surface : Colors.white;
+    final textColor =
+        isDark ? theme.colorScheme.onSurface : const Color(0xFF111418);
+    final subtitleColor = isDark
+        ? theme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+    final imageBg =
+        isDark ? theme.colorScheme.surfaceVariant : Colors.grey.shade200;
+    final shadowColor =
+        isDark ? Colors.black.withOpacity(0.2) : Colors.black.withOpacity(0.06);
+
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: surfaceColor,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -313,14 +317,14 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
                 width: 128,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.grey.shade200,
+                  color: imageBg,
                   image: _profileImage != null
                       ? DecorationImage(
                           image: FileImage(_profileImage!), fit: BoxFit.cover)
                       : null,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.06),
+                      color: shadowColor,
                       blurRadius: 10,
                       offset: const Offset(0, 4),
                     )
@@ -359,18 +363,18 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
             ],
           ),
           const SizedBox(height: 12),
-          const Text(
+          Text(
             'Upload Profile Picture',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w700,
-              color: Color(0xFF111418),
+              color: textColor,
             ),
           ),
           const SizedBox(height: 4),
-          const Text(
+          Text(
             'This helps tutors find the right fit.',
-            style: TextStyle(color: Color(0xFF617589)),
+            style: TextStyle(color: subtitleColor),
           ),
         ],
       ),
@@ -378,10 +382,17 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
   }
 
   Widget _sectionCard(String title, Widget child, {Widget? badge}) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final surfaceColor =
+        isDark ? theme.colorScheme.surface : Colors.white;
+    final textColor =
+        isDark ? theme.colorScheme.onSurface : const Color(0xFF111418);
+
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: surfaceColor,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -392,10 +403,10 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
               Expanded(
                 child: Text(
                   title,
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xFF111418)),
+                      color: textColor),
                 ),
               ),
               if (badge != null) badge,
@@ -448,11 +459,17 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
         ActionChip(
           label: Text(
             actionLabel,
-            style: const TextStyle(
-                color: Color(0xFF617589), fontWeight: FontWeight.w600),
+            style: TextStyle(
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Theme.of(context).colorScheme.onSurfaceVariant
+                  : const Color(0xFF617589),
+              fontWeight: FontWeight.w600,
+            ),
           ),
           onPressed: onAdd,
-          backgroundColor: Colors.grey.shade100,
+          backgroundColor: Theme.of(context).brightness == Brightness.dark
+              ? Theme.of(context).colorScheme.surfaceVariant
+              : Colors.grey.shade100,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
             side: BorderSide.none,
@@ -462,29 +479,42 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
     );
   }
 
-  Widget _uploadButton(String label, File? file, Function(File) onPick) {
-    return OutlinedButton.icon(
-      onPressed: () => _pickImage(onPick),
-      style: OutlinedButton.styleFrom(
-        minimumSize: const Size.fromHeight(52),
-        side: const BorderSide(color: Color(0xFF2B8CEE)),
-        foregroundColor: const Color(0xFF2B8CEE),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      ),
-      icon: const Icon(Icons.upload_file),
-      label: Text(file == null ? label : 'Replace $label'),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final baseTheme = Theme.of(context);
+    final isDark = baseTheme.brightness == Brightness.dark;
+    final scaffoldBg = isDark
+        ? baseTheme.scaffoldBackgroundColor
+        : const Color(0xFFF6F7F8);
+    final appBarBg =
+        isDark ? baseTheme.colorScheme.surface : Colors.white;
+    final appBarFg = baseTheme.colorScheme.onSurface;
+    final hintColor = isDark
+        ? baseTheme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+    final titleColor =
+        isDark ? baseTheme.colorScheme.onSurface : const Color(0xFF111418);
+    final contentText =
+        isDark ? baseTheme.colorScheme.onSurface : const Color(0xFF111418);
+    final mutedText = isDark
+        ? baseTheme.colorScheme.onSurfaceVariant
+        : const Color(0xFF617589);
+    final mutedSurface =
+        isDark ? baseTheme.colorScheme.surfaceVariant : Colors.grey.shade100;
+    final contentSurface =
+        isDark ? baseTheme.colorScheme.surfaceVariant : Colors.white;
+    final footerBg =
+        isDark ? baseTheme.colorScheme.surface : Colors.white;
 
     final lexendText = GoogleFonts.lexendTextTheme(baseTheme.textTheme);
+    final double hoursVal =
+        ((double.tryParse(_selectedHours ?? '2') ?? 2).clamp(1, 4)).toDouble();
+    final double daysVal =
+        ((double.tryParse(_selectedDays ?? '3') ?? 3).clamp(1, 7)).toDouble();
 
     return Theme(
       data: baseTheme.copyWith(
-        scaffoldBackgroundColor: const Color(0xFFF6F7F8),
+        scaffoldBackgroundColor: scaffoldBg,
         textTheme: lexendText,
         primaryTextTheme: GoogleFonts.lexendTextTheme(
           baseTheme.primaryTextTheme,
@@ -492,28 +522,28 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
         appBarTheme: baseTheme.appBarTheme.copyWith(
           titleTextStyle: GoogleFonts.lexend(
             fontWeight: FontWeight.w700,
-            color: const Color(0xFF111418),
+            color: titleColor,
             fontSize: 20,
           ),
           toolbarTextStyle: GoogleFonts.lexend(
               textStyle: baseTheme.appBarTheme.toolbarTextStyle),
         ),
         inputDecorationTheme: baseTheme.inputDecorationTheme.copyWith(
-          hintStyle: GoogleFonts.lexend(color: const Color(0xFF617589)),
+          hintStyle: GoogleFonts.lexend(color: hintColor),
         ),
       ),
       child: DefaultTextStyle.merge(
           style: GoogleFonts.lexend(),
           child: Scaffold(
             appBar: AppBar(
-              backgroundColor: Colors.white,
-              foregroundColor: const Color(0xFF111418),
+              backgroundColor: appBarBg,
+              foregroundColor: appBarFg,
               elevation: 0.5,
-              title: const Text(
-                'Create Learner Profile',
+              title: Text(
+                widget.isEdit ? 'Edit Profile' : 'Create Your Profile',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF111418),
+                  color: titleColor,
                 ),
               ),
               centerTitle: false,
@@ -558,7 +588,7 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
                                   child: DropdownButtonFormField<String>(
                                     value: _selectedSex,
                                     style: GoogleFonts.lexend(
-                                      color: const Color(0xFF111418),
+                                      color: contentText,
                                       fontSize: 14,
                                     ),
                                     decoration: _fieldDecoration(hint: 'Sex *'),
@@ -568,8 +598,7 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
                                               child: Text(
                                                 s,
                                                 style: GoogleFonts.lexend(
-                                                  color:
-                                                      const Color(0xFF111418),
+                                                  color: contentText,
                                                 ),
                                               ),
                                             ))
@@ -593,17 +622,17 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
+                            Text(
                               'Grade Levels*',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF111418)),
+                                  color: contentText),
                             ),
                             const SizedBox(height: 8),
                             Container(
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: contentSurface,
                                 borderRadius: BorderRadius.circular(12),
                                 // border: Border.all(color: Color(0xFFD1D1D1)),
                               ),
@@ -617,17 +646,17 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
                               ),
                             ),
                             const SizedBox(height: 16),
-                            const Text(
+                            Text(
                               'Subjects you need help with*',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF111418)),
+                                  color: contentText),
                             ),
                             const SizedBox(height: 8),
                             Container(
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: contentSurface,
                                 borderRadius: BorderRadius.circular(12),
                                 // border: Border.all(color: Color(0xFFD1D1D1)),
                               ),
@@ -649,52 +678,87 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      const Text(
-                                        'Hours per Day',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            color: Color(0xFF111418)),
-                                      ),
-                                      const SizedBox(height: 8),
-                                      TextFormField(
-                                        controller: _hoursController,
-                                        keyboardType: TextInputType.number,
-                                        decoration: _fieldDecoration(
-                                            hint: 'e.g. 3 hours'),
-                                      ),
-                                    ],
+                            Text(
+                              'Preferred Tutor Gender',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: contentText),
+                            ),
+                            const SizedBox(height: 8),
+                            Wrap(
+                              spacing: 8,
+                              runSpacing: 8,
+                              children: tutorGenderOptions.map((opt) {
+                                final selected = _preferredTutorGender == opt;
+                                return ChoiceChip(
+                                  showCheckmark: false,
+                                  label: Text(
+                                    opt,
+                                    style: GoogleFonts.lexend(
+                                      color: selected
+                                          ? const Color(0xFF2B8CEE)
+                                          : mutedText,
+                                      fontWeight: selected
+                                          ? FontWeight.w700
+                                          : FontWeight.w500,
+                                      fontSize: 14,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(width: 12),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      const Text(
-                                        'Days per Week',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            color: Color(0xFF111418)),
-                                      ),
-                                      const SizedBox(height: 8),
-                                      TextFormField(
-                                        controller: _daysController,
-                                        keyboardType: TextInputType.number,
-                                        decoration: _fieldDecoration(
-                                            hint: 'e.g. 5 days'),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                  selected: selected,
+                                  onSelected: (_) => setState(
+                                      () => _preferredTutorGender = opt),
+                                  selectedColor:
+                                      const Color(0xFF2B8CEE).withOpacity(0.2),
+                                  backgroundColor: mutedSurface,
+                                  side: BorderSide.none,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12)),
+                                );
+                              }).toList(),
+                            ),
+                            const SizedBox(height: 16),
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                border:
+                                    Border.all(color: const Color(0xFFD1D1D1)),
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
+                              child: _labeledSlider(
+                                label: 'Hours per Day',
+                                value: hoursVal,
+                                min: 1,
+                                max: 4,
+                                display: '${hoursVal.round()} Hours',
+                                onChanged: (v) => setState(() {
+                                  final val = v.round().toString();
+                                  _selectedHours = val;
+                                  _hoursController.text = val;
+                                }),
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                border:
+                                    Border.all(color: const Color(0xFFD1D1D1)),
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
+                              child: _labeledSlider(
+                                label: 'Days per Week',
+                                value: daysVal,
+                                min: 1,
+                                max: 7,
+                                display: '${daysVal.round()} Days',
+                                onChanged: (v) => setState(() {
+                                  final val = v.round().toString();
+                                  _selectedDays = val;
+                                  _daysController.text = val;
+                                }),
+                              ),
                             ),
                             const SizedBox(height: 16),
                             TextFormField(
@@ -719,147 +783,40 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 12),
-                      _sectionCard(
-                        'Verification',
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 6),
-                                  decoration: BoxDecoration(
-                                    color: _verified
-                                        ? const Color(0x332B8CEE)
-                                        : const Color(0x33F5A623),
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Icon(
-                                          _verified
-                                              ? Icons.verified
-                                              : Icons.hourglass_top,
-                                          color: _verified
-                                              ? const Color(0xFF2B8CEE)
-                                              : const Color(0xFFF5A623),
-                                          size: 16),
-                                      const SizedBox(width: 6),
-                                      Text(
-                                        _verified ? 'Verified' : 'Pending',
-                                        style: TextStyle(
-                                            color: _verified
-                                                ? const Color(0xFF2B8CEE)
-                                                : const Color(0xFFF5A623),
-                                            fontWeight: FontWeight.w700),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 12),
-                            DropdownButtonFormField<String>(
-                              value: _selectedIdType,
-                              decoration: _fieldDecoration(hint: 'ID Type'),
-                              items: [
-                                'National ID',
-                                'Passport',
-                                'Driver\'s License'
-                              ]
-                                  .map((t) => DropdownMenuItem(
-                                        value: t,
-                                        child: Text(t),
-                                      ))
-                                  .toList(),
-                              onChanged: (v) =>
-                                  setState(() => _selectedIdType = v),
-                              validator: (_) => null,
-                            ),
-                            const SizedBox(height: 12),
-                            TextFormField(
-                              controller: _idNumberController,
-                              decoration: _fieldDecoration(hint: 'ID Number'),
-                              validator: (_) => null,
-                            ),
-                            const SizedBox(height: 12),
-                            InkWell(
-                              onTap: () async {
-                                final picked = await showDatePicker(
-                                  context: context,
-                                  initialDate: _idExpiryDate ?? DateTime.now(),
-                                  firstDate: DateTime(2000),
-                                  lastDate: DateTime(2100),
-                                );
-                                if (picked != null) {
-                                  setState(() => _idExpiryDate = picked);
-                                }
-                              },
-                              child: InputDecorator(
-                                decoration:
-                                    _fieldDecoration(hint: 'ID Expiry Date *'),
-                                child: Text(
-                                  _idExpiryDate == null
-                                      ? 'Select date'
-                                      : '${_idExpiryDate!.year}-${_idExpiryDate!.month.toString().padLeft(2, '0')}-${_idExpiryDate!.day.toString().padLeft(2, '0')}',
-                                  style: TextStyle(
-                                    color: _idExpiryDate == null
-                                        ? const Color(0xFF617589)
-                                        : const Color(0xFF111418),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 14),
-                            _uploadButton('Upload ID Front', _idFront,
-                                (f) => setState(() => _idFront = f)),
-                            const SizedBox(height: 10),
-                            _uploadButton('Upload ID Back', _idBack,
-                                (f) => setState(() => _idBack = f)),
-                            const SizedBox(height: 8),
-                            const Text(
-                              'Your documents are safe with us. We use them for verification purposes only.',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Color(0xFF617589), fontSize: 12),
-                            ),
-                          ],
-                        ),
-                      ),
                     ],
                   ),
                 ),
               ),
             ),
-            bottomNavigationBar: Container(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 8,
-                    offset: Offset(0, -2),
-                  )
-                ],
-              ),
-              child: ElevatedButton(
-                onPressed: _isUploading ? null : _saveParentProfile,
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size.fromHeight(52),
-                  backgroundColor: const Color(0xFF2B8CEE),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
+            bottomNavigationBar: SafeArea(
+              top: false,
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+                decoration: BoxDecoration(
+                  color: footerBg,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 8,
+                      offset: Offset(0, -2),
+                    )
+                  ],
                 ),
-                child: const Text(
-                  'Save and Continue',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16),
+                child: ElevatedButton(
+                  onPressed: _isUploading ? null : _saveParentProfile,
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size.fromHeight(52),
+                    backgroundColor: const Color(0xFF2B8CEE),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                  ),
+                  child: const Text(
+                    'Save and Continue',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16),
+                  ),
                 ),
               ),
             ),
@@ -869,6 +826,7 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
 
   Widget _cityAutocomplete() {
     return Autocomplete<String>(
+      initialValue: TextEditingValue(text: _cityController.text),
       optionsBuilder: (text) {
         final query = text.text.toLowerCase();
         if (query.isEmpty) return const Iterable<String>.empty();
@@ -877,16 +835,11 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
         );
       },
       fieldViewBuilder: (context, controller, focusNode, onFieldSubmitted) {
-        controller.text = _cityController.text;
-        controller.selection = TextSelection.fromPosition(
-            TextPosition(offset: controller.text.length));
-        controller.addListener(() {
-          _cityController.text = controller.text;
-        });
         return TextFormField(
           controller: controller,
           focusNode: focusNode,
           decoration: _fieldDecoration(hint: 'City *'),
+          onChanged: (value) => _cityController.text = value,
           validator: (v) => v == null || v.isEmpty ? 'Please enter city' : null,
         );
       },
@@ -945,6 +898,46 @@ class _ParentInfoScreenState extends State<ParentInfoScreen> {
           ),
         );
       },
+    );
+  }
+
+  Widget _labeledSlider({
+    required String label,
+    required double value,
+    required double min,
+    required double max,
+    required String display,
+    required ValueChanged<double> onChanged,
+  }) {
+    final theme = Theme.of(context);
+    final textColor = theme.brightness == Brightness.dark
+        ? theme.colorScheme.onSurface
+        : const Color(0xFF111418);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(label,
+                style: TextStyle(
+                    fontWeight: FontWeight.w600, color: textColor)),
+            Text(display,
+                style: const TextStyle(
+                    fontWeight: FontWeight.w700, color: Color(0xFF2B8CEE))),
+          ],
+        ),
+        Slider(
+          value: value,
+          min: min,
+          max: max,
+          divisions: (max - min).round(),
+          activeColor: const Color(0xFF2B8CEE),
+          inactiveColor: const Color(0xFFD1D1D1),
+          onChanged: onChanged,
+        ),
+      ],
     );
   }
 }

@@ -10,11 +10,15 @@ import 'screens/home_screen.dart';
 import 'screens/student_info_screen.dart';
 import 'screens/parent_info_screen.dart';
 import 'screens/tutor_info_screen.dart';
+import 'screens/suspended_screen.dart';
 import 'firebase_options.dart';
 import 'providers/notification_provider.dart';
 import 'providers/rating_provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'providers/theme_provider.dart';
+import 'theme/app_theme.dart';
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -47,101 +51,111 @@ class MentorMeApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => MessageProvider()),
         ChangeNotifierProvider(create: (_) => NotificationProvider()),
         ChangeNotifierProvider(create: (_) => RatingProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        navigatorKey: navigatorKey,
-        title: 'MentorMe',
-        theme: ThemeData(
-          primaryColor: const Color(0xFF2F4B8A),
-          colorScheme: const ColorScheme.light(
-            primary: Color(0xFF2F4B8A),
-            secondary: Color(0xFFFF6B6B),
-            background: Color(0xFFF7F9FB),
-          ),
-          scaffoldBackgroundColor: const Color(0xFFF7F9FB),
-          fontFamily: 'Poppins',
-          textTheme: const TextTheme(
-            bodyMedium: TextStyle(color: Color(0xFF1F2937)),
-          ),
-          elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF2F4B8A),
-              foregroundColor: Colors.white,
-              minimumSize: const Size(double.infinity, 50),
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(12)),
-              ),
-            ),
-          ),
-        ),
-        initialRoute: '/',
-        routes: {
-          '/': (context) => const AuthSelectionScreen(),
-          '/login': (context) => const LoginScreen(),
-          '/signup': (context) => const SignupScreen(),
-          '/home': (context) => const HomeScreen(),
-          '/student-info': (context) => const StudentInfoScreen(),
-          '/parent-info': (context) => const ParentInfoScreen(),
-          '/tutor-info': (context) => const TutorInfoScreen(),
-        },
-        onGenerateRoute: (settings) {
-          if (settings.name == '/home') {
-            final authProvider = Provider.of<AuthProvider>(
-              navigatorKey.currentContext!,
-              listen: false,
-            );
-            final user = authProvider.currentUser;
+      child: StreamBuilder<firebase_auth.User?>(
+        stream: firebase_auth.FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          final user = snapshot.data;
+          final themeProvider = context.read<ThemeProvider>();
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            themeProvider.loadForUser(user?.uid);
+          });
+          final themeMode =
+              user == null ? ThemeMode.light : context.watch<ThemeProvider>().themeMode;
 
-            if (user == null) {
-              return MaterialPageRoute(
-                builder: (_) => const AuthSelectionScreen(),
-              );
-            }
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            navigatorKey: navigatorKey,
+            title: 'MentorMe',
+            theme: AppTheme.light,
+            darkTheme: AppTheme.dark,
+            themeMode: themeMode,
+            initialRoute: '/',
+            routes: {
+              '/': (context) => Theme(
+                    data: AppTheme.light,
+                    child: const AuthSelectionScreen(),
+                  ),
+              '/login': (context) => Theme(
+                    data: AppTheme.light,
+                    child: const LoginScreen(),
+                  ),
+              '/signup': (context) => Theme(
+                    data: AppTheme.light,
+                    child: const SignupScreen(),
+                  ),
+              '/home': (context) => const HomeScreen(),
+              '/student-info': (context) => const StudentInfoScreen(),
+              '/parent-info': (context) => const ParentInfoScreen(),
+              '/tutor-info': (context) => const TutorInfoScreen(),
+              '/suspended': (context) => const SuspendedScreen(),
+            },
+            onGenerateRoute: (settings) {
+              if (settings.name == '/home') {
+                final authProvider = Provider.of<AuthProvider>(
+                  navigatorKey.currentContext!,
+                  listen: false,
+                );
+                final user = authProvider.currentUser;
 
-            return MaterialPageRoute(builder: (_) {
-              return FutureBuilder<DocumentSnapshot>(
-                future: FirebaseFirestore.instance
-                    .collection('users')
-                    .doc(user.uid)
-                    .get(),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const Scaffold(
-                      body: Center(child: CircularProgressIndicator()),
-                    );
-                  }
+                if (user == null) {
+                  return MaterialPageRoute(
+                    builder: (_) => const AuthSelectionScreen(),
+                  );
+                }
 
-                  if (!snapshot.hasData || !snapshot.data!.exists) {
-                    return const AuthSelectionScreen();
-                  }
+                return MaterialPageRoute(builder: (_) {
+                  return FutureBuilder<DocumentSnapshot>(
+                    future: FirebaseFirestore.instance
+                        .collection('users')
+                        .doc(user.uid)
+                        .get(),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const Scaffold(
+                          body: Center(child: CircularProgressIndicator()),
+                        );
+                      }
 
-                  final data = snapshot.data!.data() as Map<String, dynamic>;
-                  final role =
-                      (data['role'] ?? '').toString().trim().toLowerCase();
-                  final completedProfile = data['completedProfile'] == true;
-
-                  // If profile not completed, send user to their respective info screen
-                  if (!completedProfile) {
-                    switch (role) {
-                      case 'student':
-                        return const StudentInfoScreen();
-                      case 'parent':
-                        return const ParentInfoScreen();
-                      case 'tutor':
-                        return const TutorInfoScreen();
-                      default:
+                      if (!snapshot.hasData || !snapshot.data!.exists) {
                         return const AuthSelectionScreen();
-                    }
-                  }
+                      }
 
-                  // If profile is completed, ALL users go to the unified HomeScreen
-                  return const HomeScreen();
-                },
-              );
-            });
-          }
-          return null;
+                      final data =
+                          snapshot.data!.data() as Map<String, dynamic>;
+                      final role =
+                          (data['role'] ?? '').toString().trim().toLowerCase();
+                      final completedProfile = data['completedProfile'] == true;
+                      final suspended = data['suspended'] == true;
+
+                      if (suspended) {
+                        return const SuspendedScreen();
+                      }
+
+                      // If profile not completed, send user to their respective info screen
+                      if (!completedProfile) {
+                        switch (role) {
+                          case 'student':
+                            return const StudentInfoScreen();
+                          case 'parent':
+                            return const ParentInfoScreen();
+                          case 'tutor':
+                            return const TutorInfoScreen();
+                          default:
+                            return const AuthSelectionScreen();
+                        }
+                      }
+
+                      // If profile is completed, ALL users go to the unified HomeScreen
+                      return const HomeScreen();
+                    },
+                  );
+                });
+              }
+              return null;
+            },
+          );
         },
       ),
     );

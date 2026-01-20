@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import '../providers/auth_provider.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -63,10 +65,71 @@ class _LoginScreenState extends State<LoginScreen> {
           .doc(user.uid)
           .get();
 
+      if (doc.data()?['suspended'] == true) {
+        await firebase_auth.FirebaseAuth.instance.signOut();
+        if (!mounted) return;
+        Navigator.pushReplacementNamed(context, '/suspended');
+        return;
+      }
+
+      final role =
+          (doc.data()?['role'] ?? _role).toString().trim().toLowerCase();
       if (doc.exists && doc.data()?['completedProfile'] == true) {
         Navigator.pushReplacementNamed(context, '/home');
       } else {
-        switch (_role) {
+        switch (role) {
+          case 'student':
+            Navigator.pushReplacementNamed(context, '/student-info');
+            break;
+          case 'tutor':
+            Navigator.pushReplacementNamed(context, '/tutor-info');
+            break;
+          case 'parent':
+            Navigator.pushReplacementNamed(context, '/parent-info');
+            break;
+          default:
+            Navigator.pushReplacementNamed(context, '/student-info');
+        }
+      }
+    } catch (e) {
+      setState(() => _errorMessage = authProvider.error ?? e.toString());
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
+    }
+  }
+
+  Future<void> _loginWithGoogle() async {
+    setState(() {
+      _isLoading = true;
+      _errorMessage = null;
+    });
+
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+    try {
+      final user = await authProvider.signInWithGoogle(role: _role);
+      if (user == null) {
+        setState(() => _errorMessage = 'Sign-in canceled.');
+        return;
+      }
+
+      final doc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .get();
+
+      if (doc.data()?['suspended'] == true) {
+        await firebase_auth.FirebaseAuth.instance.signOut();
+        if (!mounted) return;
+        Navigator.pushReplacementNamed(context, '/suspended');
+        return;
+      }
+
+      final role =
+          (doc.data()?['role'] ?? _role).toString().trim().toLowerCase();
+      if (doc.exists && doc.data()?['completedProfile'] == true) {
+        Navigator.pushReplacementNamed(context, '/home');
+      } else {
+        switch (role) {
           case 'student':
             Navigator.pushReplacementNamed(context, '/student-info');
             break;
@@ -364,16 +427,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           SizedBox(
                             height: 56,
                             child: OutlinedButton.icon(
-                              onPressed: _isLoading ? null : () {},
-                              icon: Image.network(
-                                'https://lh3.googleusercontent.com/aida-public/AB6AXuACQhTmPO-ZyOMnXSFM3l7xSKaM195s1LX47xnwFmwBdthJXXmlZ9jobytRgolm5vD_uLRTtxsKu9bQoaKOjGD3JA9LPKXC8YzWrUHc6VR50ACKXVN3mkpDA6nvL1ehqWhAghpA7viGWkU22j49fEX-HwtxdBwttDtJkuuj0_ERljKv7cz6yjRQM30s3FAGbnt1U_NCqI4E0DaD96x6EcrjMzW3eMsn8rCp9F1gFIh99U5P0XlDn8ndnyFm2oC7vNFza-gG3CV0jteJ',
-                                height: 24,
-                                width: 24,
-                                errorBuilder: (_, __, ___) => const Icon(
-                                  Icons.g_mobiledata,
-                                  color: Color(0xFF4285F4),
-                                  size: 24,
-                                ),
+                              onPressed: _isLoading ? null : _loginWithGoogle,
+                              icon: SvgPicture.asset(
+                                'assets/google_logo.svg',
+                                height: 22,
+                                width: 22,
                               ),
                               label: Padding(
                                 padding:

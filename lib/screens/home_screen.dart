@@ -5,14 +5,17 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../models/message_model.dart';
 import '../models/notification_model.dart';
 import '../providers/auth_provider.dart';
 import '../providers/message_provider.dart';
 import '../providers/notification_provider.dart';
+import '../providers/theme_provider.dart';
 import '../screens/chat_screen.dart';
 import '../screens/relationships_screen.dart';
+import '../screens/student_info_screen.dart';
+import '../screens/parent_info_screen.dart';
+import '../screens/tutor_info_screen.dart';
 import '../services/interaction_logger.dart';
 import '../theme/app_theme.dart';
 import '../widgets/ui/empty_state.dart' as ui;
@@ -34,7 +37,6 @@ class _HomeScreenState extends State<HomeScreen> {
   String? _userRole;
   String? _profileImage;
   double? _userRating;
-  bool _isDarkMode = false;
   int _relationshipsInitialTab = 0;
   // NEW: hybrid recommendation service
   late final RecommendationService _recService;
@@ -83,7 +85,6 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     _recService = RecommendationService();
-    _loadThemePreference();
     _loadUserData();
     _loadRecommendations();
     _searchQuery = '';
@@ -234,11 +235,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       const SizedBox(height: 16),
-                      GridView.count(
-                        crossAxisCount: 2,
+                      GridView(
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisExtent: 72,
+                        ),
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        childAspectRatio: 3.3,
                         padding: EdgeInsets.zero,
                         children: [
                           _profileInfoTile('Sex', sex, isDark,
@@ -409,6 +413,8 @@ class _HomeScreenState extends State<HomeScreen> {
             fontSize: 13,
             color: isDark ? Colors.grey.shade400 : const Color(0xFF617589),
           ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         Text(
           value,
@@ -416,6 +422,8 @@ class _HomeScreenState extends State<HomeScreen> {
             fontSize: 14,
             color: isDark ? Colors.white : const Color(0xFF111418),
           ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
       ],
     );
@@ -500,18 +508,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Future<void> _loadThemePreference() async {
-    final prefs = await SharedPreferences.getInstance();
-    setState(() {
-      _isDarkMode = prefs.getBool('darkMode') ?? false;
-    });
-  }
-
-  Future<void> _saveThemePreference(bool isDarkMode) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('darkMode', isDarkMode);
-  }
-
   Future<void> _loadUserData() async {
     final user = firebase_auth.FirebaseAuth.instance.currentUser;
     if (user != null) {
@@ -521,6 +517,12 @@ class _HomeScreenState extends State<HomeScreen> {
           .get();
 
       if (doc.exists) {
+        if (doc.data()?['suspended'] == true) {
+          await firebase_auth.FirebaseAuth.instance.signOut();
+          if (!mounted) return;
+          Navigator.pushReplacementNamed(context, '/suspended');
+          return;
+        }
         setState(() {
           _userRole = doc.data()?['role'];
           _userName = doc.data()?['name'];
@@ -711,15 +713,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // Role-based text helpers
   String _getWelcomeMessage() {
-    switch (_userRole) {
-      case 'tutor':
-        return 'Find learners that match your expertise';
-      case 'parent':
-        return 'Find the perfect tutor for your child';
-      case 'student':
-      default:
-        return 'Find the perfect tutor for your needs';
+    if (_userRole == 'tutor') {
+      return 'Find learners';
     }
+    return 'Find the perfect tutor';
   }
 
   String _getSearchHintText() {
@@ -821,66 +818,69 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               // Header with profile picture and theme toggle
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      if (_profileImage != null)
-                        CircleAvatar(
-                          radius: 24,
-                          backgroundImage: NetworkImage(_profileImage!),
-                        )
-                      else
-                        CircleAvatar(
-                          radius: 24,
-                          backgroundColor: Colors.blue.shade100,
-                          child: Text(
-                            _userName != null && _userName!.isNotEmpty
-                                ? _userName!.substring(0, 1).toUpperCase()
-                                : 'U',
-                            style: const TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Row(
+                      children: [
+                        if (_profileImage != null)
+                          CircleAvatar(
+                            radius: 24,
+                            backgroundImage: NetworkImage(_profileImage!),
+                          )
+                        else
+                          CircleAvatar(
+                            radius: 24,
+                            backgroundColor: Colors.blue.shade100,
+                            child: Text(
+                              _userName != null && _userName!.isNotEmpty
+                                  ? _userName!.substring(0, 1).toUpperCase()
+                                  : 'U',
+                              style: const TextStyle(
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
+                          ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Hello, ${_userName ?? 'there'}!",
+                                style: _lexendTextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                _getWelcomeMessage(),
+                                style: _lexendTextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey.shade600,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
                           ),
                         ),
-                      const SizedBox(width: 12),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Hello, ${_userName ?? 'there'}! 👋",
-                            style: _lexendTextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            _getWelcomeMessage(),
-                            style: _lexendTextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.grey.shade600,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   IconButton(
                     onPressed: () async {
-                      final newMode = !_isDarkMode;
-                      setState(() {
-                        _isDarkMode = newMode;
-                      });
-                      await _saveThemePreference(newMode);
-                      // Force rebuild of the entire app
-                      (context as Element).markNeedsBuild();
+                      await context.read<ThemeProvider>().toggleTheme();
                     },
                     icon: Icon(
-                      _isDarkMode ? Icons.light_mode : Icons.dark_mode,
-                      color: Colors.blue.shade700,
+                      context.watch<ThemeProvider>().isDarkMode
+                          ? Icons.light_mode
+                          : Icons.dark_mode,
+                      color: theme.colorScheme.primary,
                       size: 28,
                     ),
                   ),
@@ -2688,140 +2688,143 @@ class _HomeScreenState extends State<HomeScreen> {
     final cardColor = isDark ? theme.colorScheme.surfaceVariant : Colors.white;
     const primaryColor = Color(0xFF2B8CEE);
 
-    return StreamBuilder<List<Message>>(
-      stream: Provider.of<MessageProvider>(
-        context,
-      ).getConversations(currentUser.uid),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
-        }
-
-        if (snapshot.hasError) {
-          return Center(
-            child: Text(
-              'Error: ${snapshot.error}',
-              style: _lexendTextStyle(),
-            ),
-          );
-        }
-
-        if (!snapshot.hasData || snapshot.data!.isEmpty) {
-          return Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
+    return Container(
+      color: bgColor,
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+            child: Row(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade50,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.chat_bubble_outline,
-                        color: Colors.blue.shade700,
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          'Your conversations will appear here',
-                          style: _lexendTextStyle(
-                            fontSize: 16,
-                            color: Colors.black87,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          );
-        }
-
-        final conversations = snapshot.data!;
-        final filtered = conversations.where((c) {
-          final isSender = c.senderId == currentUser.uid;
-          final otherName =
-              (isSender ? c.receiverName : c.senderName).toLowerCase();
-          final lastMsg = c.content.toLowerCase();
-          final q = _messageSearchQuery.toLowerCase();
-          if (q.isEmpty) return true;
-          return otherName.contains(q) || lastMsg.contains(q);
-        }).toList();
-
-        return Container(
-          color: bgColor,
-          child: Column(
-            children: [
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                color: bgColor,
-                child: Center(
+                const SizedBox(width: 48),
+                Expanded(
                   child: Text(
                     'Messages',
+                    textAlign: TextAlign.center,
                     style: _lexendTextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.w700,
                       color: theme.colorScheme.onBackground,
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: isDark
-                        ? theme.colorScheme.surfaceVariant
-                        : Colors.white,
-                    borderRadius: BorderRadius.circular(12),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.05),
-                        blurRadius: 8,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
+                const SizedBox(width: 48),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Container(
+              decoration: BoxDecoration(
+                color:
+                    isDark ? theme.colorScheme.surfaceVariant : Colors.white,
+                borderRadius: BorderRadius.circular(12),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.05),
+                    blurRadius: 8,
+                    offset: const Offset(0, 3),
                   ),
-                  child: Row(
-                    children: [
-                      const SizedBox(width: 12),
-                      Icon(Icons.search,
-                          color: isDark
-                              ? Colors.grey.shade400
-                              : Colors.grey.shade600),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: TextField(
-                          controller: _messageSearchController,
-                          onChanged: (v) =>
-                              setState(() => _messageSearchQuery = v),
-                          style: _lexendTextStyle(
-                            color: theme.colorScheme.onSurface,
+                ],
+              ),
+              child: Row(
+                children: [
+                  const SizedBox(width: 12),
+                  Icon(Icons.search,
+                      color: isDark
+                          ? Colors.grey.shade400
+                          : Colors.grey.shade600),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: TextField(
+                      controller: _messageSearchController,
+                      onChanged: (v) =>
+                          setState(() => _messageSearchQuery = v),
+                      style: _lexendTextStyle(
+                        color: theme.colorScheme.onSurface,
+                      ),
+                      decoration: InputDecoration(
+                        hintText: 'Search for a conversation...',
+                        hintStyle: _lexendTextStyle(
+                            color: isDark
+                                ? Colors.grey.shade400
+                                : Colors.grey.shade500),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 4),
+          Expanded(
+            child: StreamBuilder<List<Message>>(
+              stream: Provider.of<MessageProvider>(
+                context,
+              ).getConversations(currentUser.uid),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+
+                if (snapshot.hasError) {
+                  return Center(
+                    child: Text(
+                      'Error: ${snapshot.error}',
+                      style: _lexendTextStyle(),
+                    ),
+                  );
+                }
+
+                if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade50,
+                            borderRadius: BorderRadius.circular(16),
                           ),
-                          decoration: InputDecoration(
-                            hintText: 'Search for a conversation...',
-                            hintStyle: _lexendTextStyle(
-                                color: isDark
-                                    ? Colors.grey.shade400
-                                    : Colors.grey.shade500),
-                            border: InputBorder.none,
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.chat_bubble_outline,
+                                color: Colors.blue.shade700,
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Text(
+                                  'Your conversations will appear here',
+                                  style: _lexendTextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black87,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ),
-                      const SizedBox(width: 12),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(height: 4),
-              Expanded(
-                child: ListView.builder(
+                      ],
+                    ),
+                  );
+                }
+
+                final conversations = snapshot.data!;
+                final filtered = conversations.where((c) {
+                  final isSender = c.senderId == currentUser.uid;
+                  final otherName =
+                      (isSender ? c.receiverName : c.senderName).toLowerCase();
+                  final lastMsg = c.content.toLowerCase();
+                  final q = _messageSearchQuery.toLowerCase();
+                  if (q.isEmpty) return true;
+                  return otherName.contains(q) || lastMsg.contains(q);
+                }).toList();
+
+                return ListView.builder(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   itemCount: filtered.length,
@@ -2959,12 +2962,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     );
                   },
-                ),
-              ),
-            ],
+                );
+              },
+            ),
           ),
-        );
-      },
+        ],
+      ),
     );
   }
 
@@ -3075,14 +3078,39 @@ class _HomeScreenState extends State<HomeScreen> {
 
     final currentUserId = currentUser.uid;
 
-    return Padding(
-      padding: const EdgeInsets.all(20),
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final infoBg =
+        isDark ? theme.colorScheme.surfaceVariant : const Color(0xFFF0F8FF);
+    final infoText =
+        isDark ? theme.colorScheme.onSurface : const Color(0xFF111418);
+
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
       child: Column(
         children: [
+          Row(
+            children: [
+              const SizedBox(width: 48),
+              Expanded(
+                child: Text(
+                  'Notifications',
+                  textAlign: TextAlign.center,
+                  style: _lexendTextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    color: theme.colorScheme.onBackground,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 48),
+            ],
+          ),
+          const SizedBox(height: 12),
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: const Color(0xFFF0F8FF),
+              color: infoBg,
               borderRadius: BorderRadius.circular(16),
             ),
             child: Row(
@@ -3096,7 +3124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         : 'Stay updated with your learning journey',
                     style: _lexendTextStyle(
                       fontSize: 16,
-                      color: Colors.black87,
+                      color: infoText,
                     ),
                   ),
                 ),
@@ -3158,6 +3186,16 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buildTutorScheduleSection() {
     final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
     if (uid == null) return const SizedBox.shrink();
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final cardColor = isDark ? theme.colorScheme.surface : Colors.white;
+    final chipColor = isDark
+        ? theme.colorScheme.surfaceVariant
+        : const Color(0xFFF0F8FF);
+    final chipTextColor =
+        isDark ? theme.colorScheme.onSurface : const Color(0xFF111418);
+    final cardShadow =
+        Colors.black.withOpacity(isDark ? 0.2 : 0.04);
     final stream = Provider.of<MessageProvider>(context, listen: false)
         .getTutoringRelationships(uid);
 
@@ -3180,7 +3218,9 @@ class _HomeScreenState extends State<HomeScreen> {
             style: _lexendTextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w500,
-              color: Colors.grey.shade600,
+              color: isDark
+                  ? theme.colorScheme.onSurfaceVariant
+                  : Colors.grey.shade600,
             ),
           );
         }
@@ -3222,11 +3262,11 @@ class _HomeScreenState extends State<HomeScreen> {
               margin: const EdgeInsets.only(bottom: 10),
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: cardColor,
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.04),
+                    color: cardShadow,
                     blurRadius: 8,
                     offset: const Offset(0, 2),
                   ),
@@ -3252,13 +3292,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 10, vertical: 6),
                             decoration: BoxDecoration(
-                              color: const Color(0xFFF0F8FF),
+                              color: chipColor,
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Text(
                               name,
                               style: _lexendTextStyle(
-                                  fontWeight: FontWeight.w600),
+                                fontWeight: FontWeight.w600,
+                                color: chipTextColor,
+                              ),
                             ),
                           ),
                         )
@@ -3341,8 +3383,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           .toList();
                       final counterpartCount = active.length;
                       final sessions = active.fold<int>(0, (sum, rel) {
-                        final d = rel['daysPerWeek'];
+                        final preferredDays = rel['preferredDays'];
+                        if (preferredDays is List && preferredDays.isNotEmpty) {
+                          return sum + preferredDays.length;
+                        }
+                        final d = rel['sessionsPerWeek'] ?? rel['daysPerWeek'];
                         if (d is num) return sum + d.toInt();
+                        if (d is String) {
+                          final parsed = int.tryParse(d);
+                          if (parsed != null) return sum + parsed;
+                        }
                         return sum;
                       });
                       final stats = <Widget>[
@@ -3383,25 +3433,46 @@ class _HomeScreenState extends State<HomeScreen> {
                     final role = _userRole ?? 'student';
                     switch (role) {
                       case 'tutor':
-                        Navigator.pushNamed(context, '/tutor-info');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const TutorInfoScreen(isEdit: true),
+                          ),
+                        );
                         break;
                       case 'parent':
-                        Navigator.pushNamed(context, '/parent-info');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) =>
+                                const ParentInfoScreen(isEdit: true),
+                          ),
+                        );
                         break;
                       case 'student':
                       default:
-                        Navigator.pushNamed(context, '/student-info');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) =>
+                                const StudentInfoScreen(isEdit: true),
+                          ),
+                        );
                     }
                   },
                 ),
-                _buildProfileOption('Settings', Icons.settings_outlined),
                 _buildProfileOption('Help & Support', Icons.help_outline),
                 _buildProfileOption(
                   'Logout',
                   Icons.logout,
                   isLogout: true,
                   onTap: () async {
+                    final shouldLogout = await _confirmLogout();
+                    if (!shouldLogout) {
+                      return;
+                    }
                     await authProvider.logout();
+                    if (!mounted) return;
                     Navigator.pushReplacementNamed(context, '/');
                   },
                 ),
@@ -3436,22 +3507,72 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  Future<bool> _confirmLogout() async {
+    return await showDialog<bool>(
+          context: context,
+          builder: (dialogContext) {
+            return AlertDialog(
+              title: Text(
+                'Log out?',
+                style: _lexendTextStyle(fontWeight: FontWeight.w700),
+              ),
+              content: Text(
+                'Are you sure you want to log out of your account?',
+                style: _lexendTextStyle(),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(dialogContext, false),
+                  child: Text(
+                    'Cancel',
+                    style: _lexendTextStyle(fontWeight: FontWeight.w600),
+                  ),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red.shade600,
+                  ),
+                  onPressed: () => Navigator.pop(dialogContext, true),
+                  child: Text(
+                    'Log out',
+                    style: _lexendTextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
+        ) ??
+        false;
+  }
+
   Widget _buildProfileOption(
     String title,
     IconData icon, {
     bool isLogout = false,
     VoidCallback? onTap,
   }) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final iconColor = isLogout ? Colors.red : theme.colorScheme.primary;
+    final textColor = isLogout
+        ? Colors.red
+        : (isDark ? theme.colorScheme.onSurface : Colors.black87);
+    final arrowColor =
+        isDark ? theme.colorScheme.onSurfaceVariant : Colors.grey.shade600;
+
     return ListTile(
-      leading: Icon(icon, color: isLogout ? Colors.red : Colors.blue.shade700),
+      leading: Icon(icon, color: iconColor),
       title: Text(
         title,
         style: _lexendTextStyle(
-          color: isLogout ? Colors.red : Colors.black87,
+          color: textColor,
           fontWeight: FontWeight.w500,
         ),
       ),
-      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+      trailing: Icon(Icons.arrow_forward_ios, size: 16, color: arrowColor),
       onTap: onTap,
     );
   }
@@ -3524,229 +3645,222 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
-      themeMode: _isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      debugShowCheckedModeBanner: false,
-      home: Builder(
-        builder: (context) => Scaffold(
-          appBar: null,
-          body: SafeArea(
-            child: IndexedStack(
-              index: _selectedIndex,
-              children: [
-                _buildHomeTab(), // index 0
-                _buildMessagesTab(), // index 1
-                _buildNotificationsTab(), // index 2
-                RelationshipsScreen(
-                  initialTab: _relationshipsInitialTab,
-                ), // index 3
-                _buildProfileTab(), // index 4
-              ],
-            ),
-          ),
-          bottomNavigationBar: StreamBuilder<int>(
-            stream: _getUnreadMessageCount(),
-            builder: (context, msgSnapshot) {
-              final unreadMsgCount = msgSnapshot.data ?? 0;
+    final theme = Theme.of(context);
+    return Scaffold(
+      appBar: null,
+      body: SafeArea(
+        child: IndexedStack(
+          index: _selectedIndex,
+          children: [
+            _buildHomeTab(), // index 0
+            _buildMessagesTab(), // index 1
+            _buildNotificationsTab(), // index 2
+            RelationshipsScreen(
+              initialTab: _relationshipsInitialTab,
+            ), // index 3
+            _buildProfileTab(), // index 4
+          ],
+        ),
+      ),
+      bottomNavigationBar: StreamBuilder<int>(
+        stream: _getUnreadMessageCount(),
+        builder: (context, msgSnapshot) {
+          final unreadMsgCount = msgSnapshot.data ?? 0;
+
+          return StreamBuilder<int>(
+            stream: _getUnreadNotificationCount(),
+            builder: (context, notifSnapshot) {
+              final unreadNotifCount = notifSnapshot.data ?? 0;
+              final effectiveNotifCount =
+                  _selectedIndex == 2 ? 0 : unreadNotifCount;
 
               return StreamBuilder<int>(
-                stream: _getUnreadNotificationCount(),
-                builder: (context, notifSnapshot) {
-                  final unreadNotifCount = notifSnapshot.data ?? 0;
-                  final effectiveNotifCount =
-                      _selectedIndex == 2 ? 0 : unreadNotifCount;
+                stream: _getRelationshipAttentionCount(),
+                builder: (context, relSnapshot) {
+                  final relCount = relSnapshot.data ?? 0;
+                  final effectiveRelCount = 0;
 
-                  return StreamBuilder<int>(
-                    stream: _getRelationshipAttentionCount(),
-                    builder: (context, relSnapshot) {
-                      final relCount = relSnapshot.data ?? 0;
-                      final effectiveRelCount = 0;
-
-                      return Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.2),
-                              blurRadius: 10,
-                              offset: const Offset(0, -2),
-                            ),
-                          ],
+                  return Container(
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: theme.shadowColor.withOpacity(0.12),
+                          blurRadius: 10,
+                          offset: const Offset(0, -2),
                         ),
-                        child: BottomNavigationBar(
-                          currentIndex: _selectedIndex,
-                          onTap: (index) {
-                            setState(() => _selectedIndex = index);
-                          },
-                          type: BottomNavigationBarType.fixed,
-                          backgroundColor: Colors.white,
-                          selectedItemColor: Colors.blue.shade700,
-                          unselectedItemColor: Colors.grey.shade600,
-                          selectedLabelStyle: _lexendTextStyle(
-                            fontWeight: FontWeight.w600,
+                      ],
+                    ),
+                    child: BottomNavigationBar(
+                      currentIndex: _selectedIndex,
+                      onTap: (index) {
+                        setState(() => _selectedIndex = index);
+                      },
+                      type: BottomNavigationBarType.fixed,
+                      backgroundColor: theme.colorScheme.surface,
+                      selectedItemColor: theme.colorScheme.primary,
+                      unselectedItemColor: theme.colorScheme.onSurfaceVariant,
+                      selectedLabelStyle: _lexendTextStyle(
+                        fontWeight: FontWeight.w600,
+                      ),
+                      unselectedLabelStyle: _lexendTextStyle(),
+                      items: [
+                        BottomNavigationBarItem(
+                          icon: const Icon(Icons.home_outlined),
+                          activeIcon: const Icon(Icons.home),
+                          label: 'Home',
+                        ),
+                        BottomNavigationBarItem(
+                          icon: Stack(
+                            children: [
+                              const Icon(Icons.chat_bubble_outline),
+                              if (unreadMsgCount > 0)
+                                Positioned(
+                                  right: 0,
+                                  top: 0,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(2),
+                                    decoration: const BoxDecoration(
+                                      color: Colors.red,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    constraints: const BoxConstraints(
+                                      minWidth: 16,
+                                      minHeight: 16,
+                                    ),
+                                    child: Text(
+                                      unreadMsgCount > 99
+                                          ? '99+'
+                                          : unreadMsgCount.toString(),
+                                      style: _lexendTextStyle(
+                                        color: Colors.white,
+                                        fontSize: 8,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ),
+                            ],
                           ),
-                          unselectedLabelStyle: _lexendTextStyle(),
-                          items: [
-                            BottomNavigationBarItem(
-                              icon: const Icon(Icons.home_outlined),
-                              activeIcon: const Icon(Icons.home),
-                              label: 'Home',
-                            ),
-                            BottomNavigationBarItem(
-                              icon: Stack(
-                                children: [
-                                  const Icon(Icons.chat_bubble_outline),
-                                  if (unreadMsgCount > 0)
-                                    Positioned(
-                                      right: 0,
-                                      top: 0,
-                                      child: Container(
-                                        padding: const EdgeInsets.all(2),
-                                        decoration: const BoxDecoration(
-                                          color: Colors.red,
-                                          shape: BoxShape.circle,
-                                        ),
-                                        constraints: const BoxConstraints(
-                                          minWidth: 16,
-                                          minHeight: 16,
-                                        ),
-                                        child: Text(
-                                          unreadMsgCount > 99
-                                              ? '99+'
-                                              : unreadMsgCount.toString(),
-                                          style: _lexendTextStyle(
-                                            color: Colors.white,
-                                            fontSize: 8,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                      ),
+                          activeIcon: Stack(
+                            children: [
+                              const Icon(Icons.chat),
+                              if (unreadMsgCount > 0)
+                                Positioned(
+                                  right: 0,
+                                  top: 0,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(2),
+                                    decoration: const BoxDecoration(
+                                      color: Colors.red,
+                                      shape: BoxShape.circle,
                                     ),
-                                ],
-                              ),
-                              activeIcon: Stack(
-                                children: [
-                                  const Icon(Icons.chat),
-                                  if (unreadMsgCount > 0)
-                                    Positioned(
-                                      right: 0,
-                                      top: 0,
-                                      child: Container(
-                                        padding: const EdgeInsets.all(2),
-                                        decoration: const BoxDecoration(
-                                          color: Colors.red,
-                                          shape: BoxShape.circle,
-                                        ),
-                                        constraints: const BoxConstraints(
-                                          minWidth: 16,
-                                          minHeight: 16,
-                                        ),
-                                        child: Text(
-                                          unreadMsgCount > 99
-                                              ? '99+'
-                                              : unreadMsgCount.toString(),
-                                          style: _lexendTextStyle(
-                                            color: Colors.white,
-                                            fontSize: 8,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                      ),
+                                    constraints: const BoxConstraints(
+                                      minWidth: 16,
+                                      minHeight: 16,
                                     ),
-                                ],
-                              ),
-                              label: 'Messages',
-                            ),
-                            BottomNavigationBarItem(
-                              icon: Stack(
-                                children: [
-                                  const Icon(Icons.notifications_outlined),
-                                  if (effectiveNotifCount > 0)
-                                    Positioned(
-                                      right: 0,
-                                      top: 0,
-                                      child: Container(
-                                        padding: const EdgeInsets.all(2),
-                                        decoration: const BoxDecoration(
-                                          color: Colors.red,
-                                          shape: BoxShape.circle,
-                                        ),
-                                        constraints: const BoxConstraints(
-                                          minWidth: 16,
-                                          minHeight: 16,
-                                        ),
-                                        child: Text(
-                                          effectiveNotifCount > 99
-                                              ? '99+'
-                                              : effectiveNotifCount.toString(),
-                                          style: _lexendTextStyle(
-                                            color: Colors.white,
-                                            fontSize: 8,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                        ),
+                                    child: Text(
+                                      unreadMsgCount > 99
+                                          ? '99+'
+                                          : unreadMsgCount.toString(),
+                                      style: _lexendTextStyle(
+                                        color: Colors.white,
+                                        fontSize: 8,
+                                        fontWeight: FontWeight.bold,
                                       ),
+                                      textAlign: TextAlign.center,
                                     ),
-                                ],
-                              ),
-                              activeIcon: const Icon(Icons.notifications),
-                              label: 'Notifications',
-                            ),
-                            BottomNavigationBarItem(
-                              icon: Stack(
-                                children: [
-                                  const Icon(Icons.group_outlined),
-                                  if (effectiveRelCount > 0)
-                                    Positioned(
-                                      right: 0,
-                                      top: 0,
-                                      child: Container(
-                                        padding: const EdgeInsets.all(2),
-                                        decoration: const BoxDecoration(
-                                          color: Colors.red,
-                                          shape: BoxShape.circle,
-                                        ),
-                                        constraints: const BoxConstraints(
-                                          minWidth: 16,
-                                          minHeight: 16,
-                                        ),
-                                        child: Text(
-                                          effectiveRelCount > 99
-                                              ? '99+'
-                                              : effectiveRelCount.toString(),
-                                          style: _lexendTextStyle(
-                                            color: Colors.white,
-                                            fontSize: 8,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                      ),
-                                    ),
-                                ],
-                              ),
-                              activeIcon: const Icon(Icons.group),
-                              label: 'Relationships',
-                            ),
-                            BottomNavigationBarItem(
-                              icon: const Icon(Icons.person_outlined),
-                              activeIcon: const Icon(Icons.person),
-                              label: 'Profile',
-                            ),
-                          ],
+                                  ),
+                                ),
+                            ],
+                          ),
+                          label: 'Messages',
                         ),
-                      );
-                    },
+                        BottomNavigationBarItem(
+                          icon: Stack(
+                            children: [
+                              const Icon(Icons.notifications_outlined),
+                              if (effectiveNotifCount > 0)
+                                Positioned(
+                                  right: 0,
+                                  top: 0,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(2),
+                                    decoration: const BoxDecoration(
+                                      color: Colors.red,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    constraints: const BoxConstraints(
+                                      minWidth: 16,
+                                      minHeight: 16,
+                                    ),
+                                    child: Text(
+                                      effectiveNotifCount > 99
+                                          ? '99+'
+                                          : effectiveNotifCount.toString(),
+                                      style: _lexendTextStyle(
+                                        color: Colors.white,
+                                        fontSize: 8,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ),
+                            ],
+                          ),
+                          activeIcon: const Icon(Icons.notifications),
+                          label: 'Notifications',
+                        ),
+                        BottomNavigationBarItem(
+                          icon: Stack(
+                            children: [
+                              const Icon(Icons.group_outlined),
+                              if (effectiveRelCount > 0)
+                                Positioned(
+                                  right: 0,
+                                  top: 0,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(2),
+                                    decoration: const BoxDecoration(
+                                      color: Colors.red,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    constraints: const BoxConstraints(
+                                      minWidth: 16,
+                                      minHeight: 16,
+                                    ),
+                                    child: Text(
+                                      effectiveRelCount > 99
+                                          ? '99+'
+                                          : effectiveRelCount.toString(),
+                                      style: _lexendTextStyle(
+                                        color: Colors.white,
+                                        fontSize: 8,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ),
+                            ],
+                          ),
+                          activeIcon: const Icon(Icons.group),
+                          label: 'Relationships',
+                        ),
+                        BottomNavigationBarItem(
+                          icon: const Icon(Icons.person_outlined),
+                          activeIcon: const Icon(Icons.person),
+                          label: 'Profile',
+                        ),
+                      ],
+                    ),
                   );
                 },
               );
             },
-          ),
-        ),
+          );
+        },
       ),
     );
   }

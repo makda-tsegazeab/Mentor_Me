@@ -108,11 +108,13 @@ class AdminUserCard extends StatefulWidget {
 
 class _AdminUserCardState extends State<AdminUserCard> {
   final _noteController = TextEditingController();
+  final _suspensionNoteController = TextEditingController();
   bool _busy = false;
 
   @override
   void dispose() {
     _noteController.dispose();
+    _suspensionNoteController.dispose();
     super.dispose();
   }
 
@@ -153,10 +155,48 @@ class _AdminUserCardState extends State<AdminUserCard> {
     }
   }
 
+  Future<void> _updateSuspension(bool nextValue) async {
+    if (widget.adminId == null) return;
+    setState(() => _busy = true);
+    try {
+      await AdminService.updateSuspension(
+        userId: widget.userId,
+        adminId: widget.adminId!,
+        suspended: nextValue,
+        note: _suspensionNoteController.text.trim(),
+      );
+      _suspensionNoteController.clear();
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              nextValue ? 'User suspended' : 'User reinstated',
+              style: GoogleFonts.lexend(),
+            ),
+          ),
+        );
+      }
+    } catch (error) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Failed to update suspension: $error',
+              style: GoogleFonts.lexend(),
+            ),
+          ),
+        );
+      }
+    } finally {
+      if (mounted) setState(() => _busy = false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final data = widget.userData;
     final isVerified = data['verified'] == true;
+    final isSuspended = data['suspended'] == true;
     final role = (data['role'] ?? 'student').toString();
     final createdAt = data['createdAt'] as Timestamp?;
     final formattedDate = createdAt != null
@@ -209,18 +249,38 @@ class _AdminUserCardState extends State<AdminUserCard> {
                     ],
                   ),
                 ),
-                Chip(
-                  label: Text(
-                    isVerified ? 'Verified' : 'Unverified',
-                    style: GoogleFonts.lexend(
-                      fontWeight: FontWeight.w600,
-                      color: isVerified
-                          ? Colors.green.shade700
-                          : Colors.orange.shade800,
+                Wrap(
+                  spacing: 8,
+                  children: [
+                    Chip(
+                      label: Text(
+                        isVerified ? 'Verified' : 'Unverified',
+                        style: GoogleFonts.lexend(
+                          fontWeight: FontWeight.w600,
+                          color: isVerified
+                              ? Colors.green.shade700
+                              : Colors.orange.shade800,
+                        ),
+                      ),
+                      backgroundColor: isVerified
+                          ? Colors.green.shade50
+                          : Colors.orange.shade50,
                     ),
-                  ),
-                  backgroundColor:
-                      isVerified ? Colors.green.shade50 : Colors.orange.shade50,
+                    Chip(
+                      label: Text(
+                        isSuspended ? 'Suspended' : 'Active',
+                        style: GoogleFonts.lexend(
+                          fontWeight: FontWeight.w600,
+                          color: isSuspended
+                              ? Colors.red.shade700
+                              : Colors.blue.shade700,
+                        ),
+                      ),
+                      backgroundColor: isSuspended
+                          ? Colors.red.shade50
+                          : Colors.blue.shade50,
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -246,6 +306,18 @@ class _AdminUserCardState extends State<AdminUserCard> {
               ),
             ),
             const SizedBox(height: 12),
+            TextField(
+              controller: _suspensionNoteController,
+              maxLines: 1,
+              decoration: InputDecoration(
+                hintText: 'Optional suspension note',
+                hintStyle: GoogleFonts.lexend(
+                  fontSize: 14,
+                  color: Colors.grey.shade500,
+                ),
+              ),
+            ),
+            const SizedBox(height: 12),
             Row(
               children: [
                 Expanded(
@@ -264,6 +336,71 @@ class _AdminUserCardState extends State<AdminUserCard> {
                     ),
                     child: Text(
                       isVerified ? 'Revoke verification' : 'Verify user',
+                      style: GoogleFonts.lexend(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+                if (widget.adminId == null)
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8),
+                    child: Icon(Icons.lock_outline, size: 20),
+                  ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: _busy || widget.adminId == null
+                        ? null
+                        : () async {
+                            final confirm = await showDialog<bool>(
+                              context: context,
+                              builder: (ctx) => AlertDialog(
+                                title: Text(
+                                  isSuspended
+                                      ? 'Reinstate user?'
+                                      : 'Suspend user?',
+                                ),
+                                content: Text(
+                                  isSuspended
+                                      ? 'This will restore access to the app.'
+                                      : 'This will block the user from logging in.',
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () =>
+                                        Navigator.pop(ctx, false),
+                                    child: const Text('Cancel'),
+                                  ),
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(ctx, true),
+                                    child: Text(
+                                      isSuspended ? 'Reinstate' : 'Suspend',
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                            if (confirm == true) {
+                              await _updateSuspension(!isSuspended);
+                            }
+                          },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: isSuspended
+                          ? Colors.green.shade700
+                          : Colors.red.shade600,
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: Text(
+                      isSuspended ? 'Reinstate user' : 'Suspend user',
                       style: GoogleFonts.lexend(
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
